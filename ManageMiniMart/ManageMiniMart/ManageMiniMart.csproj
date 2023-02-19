@@ -53,10 +53,22 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormInvoice.cs">
+    <Compile Include="FormPayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInvoice.Designer.cs">
+    <Compile Include="FormPayment.Designer.cs">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Addproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Addproduct.Designer.cs">
+      <DependentUpon>Addproduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormInvoice.Designer.cs">
       <DependentUpon>FormInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormProduct.cs">
@@ -79,7 +91,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormInvoice.resx">
+    <EmbeddedResource Include="FormPayment.resx">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Addproduct.resx">
+      <DependentUpon>Addproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormInvoice.resx">
       <DependentUpon>FormInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormLogin.resx">

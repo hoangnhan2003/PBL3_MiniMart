@@ -102,6 +102,7 @@ namespace ManageMiniMart
         private void btnDashBoard_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.color1);
+            OpenChildForm(new FormPayment());
         }
 
         private void BtnProduct_Click(object sender, EventArgs e)
@@ -137,6 +138,7 @@ namespace ManageMiniMart
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Reset();
+            
         }
 
         private void Reset()

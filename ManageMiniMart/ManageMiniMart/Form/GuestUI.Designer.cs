@@ -35,7 +35,7 @@
             this.btnDiscount = new FontAwesome.Sharp.IconButton();
             this.BtnInvoice = new FontAwesome.Sharp.IconButton();
             this.BtnProduct = new FontAwesome.Sharp.IconButton();
-            this.btnDashBoard = new FontAwesome.Sharp.IconButton();
+            this.btnPayment = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
@@ -61,7 +61,7 @@
             this.panelMenu.Controls.Add(this.btnDiscount);
             this.panelMenu.Controls.Add(this.BtnInvoice);
             this.panelMenu.Controls.Add(this.BtnProduct);
-            this.panelMenu.Controls.Add(this.btnDashBoard);
+            this.panelMenu.Controls.Add(this.btnPayment);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -184,28 +184,28 @@
             this.BtnProduct.UseVisualStyleBackColor = true;
             this.BtnProduct.Click += new System.EventHandler(this.BtnProduct_Click);
             // 
-            // btnDashBoard
+            // btnPayment
             // 
-            this.btnDashBoard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashBoard.FlatAppearance.BorderSize = 0;
-            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashBoard.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashBoard.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDashBoard.IconChar = FontAwesome.Sharp.IconChar.BarChart;
-            this.btnDashBoard.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnDashBoard.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDashBoard.IconSize = 30;
-            this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashBoard.Location = new System.Drawing.Point(0, 113);
-            this.btnDashBoard.Name = "btnDashBoard";
-            this.btnDashBoard.Padding = new System.Windows.Forms.Padding(10);
-            this.btnDashBoard.Size = new System.Drawing.Size(200, 57);
-            this.btnDashBoard.TabIndex = 1;
-            this.btnDashBoard.Text = "DashBoard";
-            this.btnDashBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDashBoard.UseVisualStyleBackColor = true;
-            this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
+            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPayment.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnPayment.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPayment.IconSize = 30;
+            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.Location = new System.Drawing.Point(0, 113);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Padding = new System.Windows.Forms.Padding(10);
+            this.btnPayment.Size = new System.Drawing.Size(200, 57);
+            this.btnPayment.TabIndex = 1;
+            this.btnPayment.Text = "Payment";
+            this.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnDashBoard_Click);
             // 
             // panel2
             // 
@@ -373,7 +373,7 @@
         private FontAwesome.Sharp.IconButton btnDiscount;
         private FontAwesome.Sharp.IconButton BtnInvoice;
         private FontAwesome.Sharp.IconButton BtnProduct;
-        private FontAwesome.Sharp.IconButton btnDashBoard;
+        private FontAwesome.Sharp.IconButton btnPayment;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelTitleBar;
