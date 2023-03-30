@@ -1,0 +1,6 @@
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\CustomControl\bin\Debug\CustomControl.dll
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\CustomControl\bin\Debug\CustomControl.pdb
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\CustomControl\obj\Debug\CustomControl.csproj.AssemblyReference.cache
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\CustomControl\obj\Debug\CustomControl.csproj.CoreCompileInputs.cache
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\CustomControl\obj\Debug\CustomControl.dll
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\CustomControl\obj\Debug\CustomControl.pdb

@@ -36,10 +36,16 @@
     <Reference Include="FontAwesome.Sharp, Version=6.2.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.2.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,60 +59,78 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormPayment.cs">
+    <Compile Include="FormActive.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPayment.Designer.cs">
+    <Compile Include="FormActive.Designer.cs">
+      <DependentUpon>FormActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPayment.Designer.cs">
       <DependentUpon>FormPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Addproduct.cs">
+    <Compile Include="View\Addproduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Addproduct.Designer.cs">
+    <Compile Include="View\Addproduct.Designer.cs">
       <DependentUpon>Addproduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormInvoice.cs">
+    <Compile Include="View\FormInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FormInvoice.Designer.cs">
+    <Compile Include="View\FormInvoice.Designer.cs">
       <DependentUpon>FormInvoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormProduct.cs">
+    <Compile Include="View\FormProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FormProduct.Designer.cs">
+    <Compile Include="View\FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormLogin.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FormLogin.Designer.cs">
+    <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\GuestUI.cs">
+    <Compile Include="View\Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\GuestUI.Designer.cs">
+    <Compile Include="View\Form_Alert.Designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GuestUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GuestUI.Designer.cs">
       <DependentUpon>GuestUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormPayment.resx">
+    <EmbeddedResource Include="FormActive.resx">
+      <DependentUpon>FormActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPayment.resx">
       <DependentUpon>FormPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Addproduct.resx">
+    <EmbeddedResource Include="View\Addproduct.resx">
       <DependentUpon>Addproduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormInvoice.resx">
+    <EmbeddedResource Include="View\FormInvoice.resx">
       <DependentUpon>FormInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormLogin.resx">
+    <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormProduct.resx">
+    <EmbeddedResource Include="View\FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\GuestUI.resx">
+    <EmbeddedResource Include="View\Form_Alert.resx">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GuestUI.resx">
       <DependentUpon>GuestUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -131,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControl\CustomControl.csproj">
+      <Project>{22A75696-BAD4-40FF-8231-AE1D98802F03}</Project>
+      <Name>CustomControl</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
