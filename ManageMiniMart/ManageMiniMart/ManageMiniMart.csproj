@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.2.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.2.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -42,9 +48,12 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -59,11 +68,61 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bill.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bill_Product.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\ProductService.cs" />
+    <Compile Include="Category.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Discount.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="FormActive.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormActive.Designer.cs">
       <DependentUpon>FormActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinimartDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MinimartDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MinimartDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MinimartDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MinimartDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shift_detail.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
     <Compile Include="View\FormPayment.cs">
       <SubType>Form</SubType>
@@ -101,11 +160,11 @@
     <Compile Include="View\Form_Alert.Designer.cs">
       <DependentUpon>Form_Alert.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\GuestUI.cs">
+    <Compile Include="View\DoashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\GuestUI.Designer.cs">
-      <DependentUpon>GuestUI.cs</DependentUpon>
+    <Compile Include="View\DoashBoard.Designer.cs">
+      <DependentUpon>DoashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,8 +189,8 @@
     <EmbeddedResource Include="View\Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\GuestUI.resx">
-      <DependentUpon>GuestUI.cs</DependentUpon>
+    <EmbeddedResource Include="View\DoashBoard.resx">
+      <DependentUpon>DoashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -142,6 +201,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="MinimartDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MinimartDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MinimartDB.edmx.diagram">
+      <DependentUpon>MinimartDB.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,6 +227,24 @@
       <Project>{22A75696-BAD4-40FF-8231-AE1D98802F03}</Project>
       <Name>CustomControl</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MinimartDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MinimartDB.edmx</DependentUpon>
+      <LastGenOutput>MinimartDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MinimartDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MinimartDB.edmx</DependentUpon>
+      <LastGenOutput>MinimartDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

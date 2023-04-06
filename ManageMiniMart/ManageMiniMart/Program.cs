@@ -16,7 +16,7 @@ namespace ManageMiniMart
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GuestUI());
+            Application.Run(new DoashBoard());
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageMiniMart.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,12 @@ namespace ManageMiniMart
     public partial class FormProduct : Form
     {
         private Form currentChildForm;
+        private ProductService productService; 
         public FormProduct()
         {
             InitializeComponent();
+            productService = new ProductService();
+            dgvProduct.DataSource = productService.getAllProduct();
         }
         public void OpenChildForm(Form form) { 
             if(currentChildForm != null)

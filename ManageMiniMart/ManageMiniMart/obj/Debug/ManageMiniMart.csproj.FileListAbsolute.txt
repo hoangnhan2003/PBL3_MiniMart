@@ -22,7 +22,6 @@ H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\Man
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.FormInvoice.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\Register_Login.FormLogin.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.FormProduct.resources
-H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.GuestUI.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.Properties.Resources.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.csproj.GenerateResource.cache
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.csproj.CoreCompileInputs.cache
@@ -36,3 +35,8 @@ H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\Man
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\CustomControl.dll
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\CustomControl.pdb
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\Guna.UI2.dll
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.DoashBoard.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\EntityFramework.dll
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\EntityFramework.SqlServer.dll
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\EntityFramework.xml
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\EntityFramework.SqlServer.xml
