@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.iconCashRegister = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtInvoiceCode = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCustomerCode = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,7 +43,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1.SuspendLayout();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -65,28 +63,6 @@
             this.iconCashRegister.Size = new System.Drawing.Size(115, 95);
             this.iconCashRegister.TabIndex = 0;
             this.iconCashRegister.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Maroon;
-            this.panel1.Controls.Add(this.txtInvoiceCode);
-            this.panel1.Location = new System.Drawing.Point(231, 195);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 27);
-            this.panel1.TabIndex = 1;
-            // 
-            // txtInvoiceCode
-            // 
-            this.txtInvoiceCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtInvoiceCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtInvoiceCode.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtInvoiceCode.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoiceCode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtInvoiceCode.Location = new System.Drawing.Point(0, 0);
-            this.txtInvoiceCode.Multiline = true;
-            this.txtInvoiceCode.Name = "txtInvoiceCode";
-            this.txtInvoiceCode.Size = new System.Drawing.Size(200, 25);
-            this.txtInvoiceCode.TabIndex = 0;
             // 
             // panel2
             // 
@@ -151,9 +127,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(21, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 23);
+            this.label2.Size = new System.Drawing.Size(136, 23);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Invoice code";
+            this.label2.Text = "PaymentMethod";
             // 
             // label3
             // 
@@ -252,12 +228,31 @@
             this.guna2Button1.TabIndex = 7;
             this.guna2Button1.Text = "Print bill";
             // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderRadius = 10;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(230, 188);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(200, 36);
+            this.guna2ComboBox1.TabIndex = 8;
+            // 
             // FormPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(800, 511);
+            this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label4);
@@ -266,13 +261,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.iconCashRegister);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPayment";
             this.Text = "FormPayment";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -287,8 +279,6 @@
         #endregion
 
         private FontAwesome.Sharp.IconButton iconCashRegister;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtInvoiceCode;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtCustomerCode;
         private System.Windows.Forms.Panel panel3;
@@ -303,5 +293,6 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
     }
 }

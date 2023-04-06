@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Addproduct));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.cbbPromotionId = new System.Windows.Forms.ComboBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,293 +41,265 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtProductCode = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.cbbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbDiscount = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnMinimize = new FontAwesome.Sharp.IconButton();
+            this.btnMaximun = new FontAwesome.Sharp.IconButton();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.iconButton3);
-            this.panel1.Controls.Add(this.cbbPromotionId);
-            this.panel1.Controls.Add(this.iconButton1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.cbbDiscount);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.cbbCategory);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(414, 521);
-            this.panel1.TabIndex = 0;
             // 
-            // comboBox1
+            // label3
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.OldLace;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBox1.Location = new System.Drawing.Point(27, 300);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(126, 24);
-            this.comboBox1.TabIndex = 2;
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.label3.Name = "label3";
             // 
-            // iconButton3
+            // panel4
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.DarkGreen;
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.LightSalmon;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ReplyAll;
-            this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.Location = new System.Drawing.Point(214, 429);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(130, 33);
-            this.iconButton3.TabIndex = 2;
-            this.iconButton3.Text = "Cancel";
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.panel4.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel4.Controls.Add(this.txtQuantity);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
             // 
-            // cbbPromotionId
+            // txtQuantity
             // 
-            this.cbbPromotionId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.cbbPromotionId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbPromotionId.FormattingEnabled = true;
-            this.cbbPromotionId.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cbbPromotionId.Location = new System.Drawing.Point(27, 356);
-            this.cbbPromotionId.Name = "cbbPromotionId";
-            this.cbbPromotionId.Size = new System.Drawing.Size(126, 24);
-            this.cbbPromotionId.TabIndex = 2;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.DarkGreen;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.LightSalmon;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.Location = new System.Drawing.Point(44, 429);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(130, 33);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "Add ";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.txtQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtQuantity, "txtQuantity");
+            this.txtQuantity.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtQuantity.Name = "txtQuantity";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
+            resources.ApplyResources(this.label7, "label7");
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(186, 354);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 23);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Promotion id";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            resources.ApplyResources(this.label6, "label6");
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(189, 298);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 23);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "category id";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
+            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(241, 171);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 23);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Price";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(241, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Name product";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(241, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Product code";
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.DarkMagenta;
+            this.panel6.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel6.Controls.Add(this.txtPrice);
-            this.panel6.Location = new System.Drawing.Point(27, 166);
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(199, 28);
-            this.panel6.TabIndex = 0;
             // 
             // txtPrice
             // 
             this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.txtPrice, "txtPrice");
             this.txtPrice.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtPrice.Location = new System.Drawing.Point(0, 0);
-            this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(199, 25);
-            this.txtPrice.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.DarkMagenta;
-            this.panel3.Controls.Add(this.txtProductName);
-            this.panel3.Location = new System.Drawing.Point(27, 106);
+            this.panel3.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel3.Controls.Add(this.txtBrand);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(199, 28);
-            this.panel3.TabIndex = 0;
+            // 
+            // txtBrand
+            // 
+            this.txtBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtBrand.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtBrand, "txtBrand");
+            this.txtBrand.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtBrand.Name = "txtBrand";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel2.Controls.Add(this.txtProductName);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
             // 
             // txtProductName
             // 
             this.txtProductName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txtProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProductName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.txtProductName, "txtProductName");
             this.txtProductName.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtProductName.Location = new System.Drawing.Point(0, 0);
-            this.txtProductName.Multiline = true;
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(199, 25);
-            this.txtProductName.TabIndex = 0;
             // 
-            // panel2
+            // cbbCategory
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkMagenta;
-            this.panel2.Controls.Add(this.txtProductCode);
-            this.panel2.Location = new System.Drawing.Point(27, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(199, 28);
-            this.panel2.TabIndex = 0;
+            this.cbbCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCategory.BorderColor = System.Drawing.Color.Transparent;
+            this.cbbCategory.BorderRadius = 10;
+            this.cbbCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCategory.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.cbbCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.cbbCategory, "cbbCategory");
+            this.cbbCategory.ForeColor = System.Drawing.Color.White;
+            this.cbbCategory.Name = "cbbCategory";
             // 
-            // txtProductCode
+            // cbbDiscount
             // 
-            this.txtProductCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtProductCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProductCode.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductCode.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtProductCode.Location = new System.Drawing.Point(0, 0);
-            this.txtProductCode.Multiline = true;
-            this.txtProductCode.Name = "txtProductCode";
-            this.txtProductCode.Size = new System.Drawing.Size(199, 25);
-            this.txtProductCode.TabIndex = 0;
+            this.cbbDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.cbbDiscount.BorderColor = System.Drawing.Color.Transparent;
+            this.cbbDiscount.BorderRadius = 10;
+            this.cbbDiscount.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbDiscount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDiscount.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.cbbDiscount.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbDiscount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.cbbDiscount, "cbbDiscount");
+            this.cbbDiscount.ForeColor = System.Drawing.Color.White;
+            this.cbbDiscount.Name = "cbbDiscount";
             // 
-            // label3
+            // btnMinimize
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(243, 227);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Amount";
+            resources.ApplyResources(this.btnMinimize, "btnMinimize");
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMinimize.IconColor = System.Drawing.Color.White;
+            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimize.IconSize = 30;
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.UseVisualStyleBackColor = true;
             // 
-            // panel4
+            // btnMaximun
             // 
-            this.panel4.BackColor = System.Drawing.Color.DarkMagenta;
-            this.panel4.Controls.Add(this.txtAmount);
-            this.panel4.Location = new System.Drawing.Point(29, 222);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(199, 28);
-            this.panel4.TabIndex = 3;
+            resources.ApplyResources(this.btnMaximun, "btnMaximun");
+            this.btnMaximun.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximun.FlatAppearance.BorderSize = 0;
+            this.btnMaximun.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMaximun.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.btnMaximun.IconColor = System.Drawing.Color.White;
+            this.btnMaximun.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaximun.IconSize = 30;
+            this.btnMaximun.Name = "btnMaximun";
+            this.btnMaximun.UseVisualStyleBackColor = true;
+            this.btnMaximun.Click += new System.EventHandler(this.btnMaximun_Click);
             // 
-            // txtAmount
+            // btnExit
             // 
-            this.txtAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAmount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmount.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtAmount.Location = new System.Drawing.Point(0, 0);
-            this.txtAmount.Multiline = true;
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(199, 25);
-            this.txtAmount.TabIndex = 0;
+            resources.ApplyResources(this.btnExit, "btnExit");
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
+            this.btnExit.IconColor = System.Drawing.Color.White;
+            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExit.IconSize = 30;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BorderRadius = 10;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.btnAdd, "btnAdd");
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAdd.Name = "btnAdd";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.SlateBlue;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Addproduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(800, 521);
+            this.Controls.Add(this.btnMinimize);
+            this.Controls.Add(this.btnMaximun);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Addproduct";
-            this.Text = "Addproduct";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -339,19 +311,22 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.TextBox txtProductName;
-        private System.Windows.Forms.TextBox txtProductCode;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbbPromotionId;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbDiscount;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCategory;
+        private FontAwesome.Sharp.IconButton btnMinimize;
+        private FontAwesome.Sharp.IconButton btnMaximun;
+        private FontAwesome.Sharp.IconButton btnExit;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
     }
 }

@@ -77,6 +77,7 @@
     <Compile Include="Bill_Product.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="BLL\CategoryService.cs" />
     <Compile Include="BLL\ProductService.cs" />
     <Compile Include="Category.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
@@ -87,6 +88,7 @@
     <Compile Include="Discount.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="FormActive.cs">
       <SubType>Form</SubType>
@@ -121,9 +123,6 @@
     <Compile Include="Shift_detail.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>MinimartDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="View\FormPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +135,11 @@
     <Compile Include="View\Addproduct.Designer.cs">
       <DependentUpon>Addproduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormInvoice.cs">
+    <Compile Include="View\FormBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormInvoice.Designer.cs">
-      <DependentUpon>FormInvoice.cs</DependentUpon>
+    <Compile Include="View\FormBill.Designer.cs">
+      <DependentUpon>FormBill.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormProduct.cs">
       <SubType>Form</SubType>
@@ -177,8 +176,8 @@
     <EmbeddedResource Include="View\Addproduct.resx">
       <DependentUpon>Addproduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormInvoice.resx">
-      <DependentUpon>FormInvoice.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormBill.resx">
+      <DependentUpon>FormBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

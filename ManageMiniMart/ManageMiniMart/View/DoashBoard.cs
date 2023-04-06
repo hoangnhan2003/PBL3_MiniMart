@@ -117,7 +117,7 @@ namespace ManageMiniMart
         private void BtnInvoice_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.color3);
-            OpenChildForm(new FormInvoice());
+            OpenChildForm(new FormBill());
         }
 
         private void btnDiscount_Click(object sender, EventArgs e)
@@ -202,6 +202,11 @@ namespace ManageMiniMart
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
         {
 
         }

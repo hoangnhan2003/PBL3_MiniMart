@@ -19,7 +19,6 @@ H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\Man
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\FontAwesome.Sharp.dll
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.csproj.AssemblyReference.cache
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.csproj.SuggestedBindingRedirects.cache
-H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.FormInvoice.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\Register_Login.FormLogin.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.FormProduct.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.Properties.Resources.resources
@@ -40,3 +39,4 @@ H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\Man
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\EntityFramework.SqlServer.dll
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\EntityFramework.xml
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\EntityFramework.SqlServer.xml
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.FormBill.resources

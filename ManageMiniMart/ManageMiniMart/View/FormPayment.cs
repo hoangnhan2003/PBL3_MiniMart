@@ -19,12 +19,12 @@ namespace ManageMiniMart
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            if(txtInvoiceCode.Text.Trim() == "" || txtCustomerCode.Text.Trim() == "" 
-                || txtAmountProduct.Text.Trim() == "")
-            {
-                Form_Alert alert= new Form_Alert();
-                alert.showAlert("Field is not blank!", Form_Alert.enmType.warning);
-            }
+            //if(txtInvoiceCode.Text.Trim() == "" || txtCustomerCode.Text.Trim() == "" 
+            //    || txtAmountProduct.Text.Trim() == "")
+            //{
+            //    Form_Alert alert= new Form_Alert();
+            //    alert.showAlert("Field is not blank!", Form_Alert.enmType.warning);
+            //}
         }
 
         private void txtAmountProduct_TextChanged(object sender, EventArgs e)

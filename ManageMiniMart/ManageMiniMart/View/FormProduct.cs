@@ -14,11 +14,14 @@ namespace ManageMiniMart
     public partial class FormProduct : Form
     {
         private Form currentChildForm;
-        private ProductService productService; 
+        private ProductService productService;
+        private CategoryService categoryService;
         public FormProduct()
         {
             InitializeComponent();
             productService = new ProductService();
+            categoryService= new CategoryService();
+            cbbCategory.DataSource = categoryService.getAllCatogory();
             dgvProduct.DataSource = productService.getAllProduct();
         }
         public void OpenChildForm(Form form) { 
@@ -37,7 +40,9 @@ namespace ManageMiniMart
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Addproduct());
+            //OpenChildForm(new Addproduct());
+            Addproduct addproduct = new Addproduct();
+            addproduct.ShowDialog();
         }
     }
 }

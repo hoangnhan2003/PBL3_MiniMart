@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ManageMiniMart
 {
-    public partial class FormInvoice : Form
+    public partial class FormBill : Form
     {
-        public FormInvoice()
+        public FormBill()
         {
             InitializeComponent();
         }
@@ -40,7 +40,7 @@ namespace ManageMiniMart
             db.Rows.Add(new object[] {
                 "InvoiceCode4","012431421","032512123",DateTime.Now.ToString()
             });
-            dataGridViewInvoice.DataSource = db;
+            dgvBill.DataSource = db;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

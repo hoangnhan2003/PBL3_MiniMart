@@ -24,6 +24,7 @@ namespace ManageMiniMart
         public int product_id { get; set; }
         public string product_name { get; set; }
         public int category_id { get; set; }
+        public string brand { get; set; }
         public double price { get; set; }
         public int quantity { get; set; }
     

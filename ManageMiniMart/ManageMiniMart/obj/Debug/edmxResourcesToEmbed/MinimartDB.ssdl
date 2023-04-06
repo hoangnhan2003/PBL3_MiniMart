@@ -14,10 +14,10 @@
       <PropertyRef Name="bill_id" />
     </Key>
     <Property Name="bill_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="person_id" Type="varchar" MaxLength="12" />
+    <Property Name="person_id" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="customer_id" Type="varchar" MaxLength="12" />
     <Property Name="created_time" Type="datetime" Nullable="false" />
-    <Property Name="payment_method" Type="nvarchar" MaxLength="50" />
+    <Property Name="payment_method" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -56,12 +56,11 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
     <Key>
       <PropertyRef Name="discount_id" />
     </Key>
-    <Property Name="discount_id" Type="int" Nullable="false" />
+    <Property Name="discount_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="discount_name" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="start_time" Type="date" Nullable="false" />
     <Property Name="end_time" Type="date" Nullable="false" />
-    <Property Name="discount_type" Type="nvarchar" MaxLength="150" />
-    <Property Name="sale" Type="int" />
+    <Property Name="sale" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="Person">
     <Key>
@@ -81,6 +80,7 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
     <Property Name="product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="product_name" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="brand" Type="nvarchar" MaxLength="150" />
     <Property Name="price" Type="float" Nullable="false" />
     <Property Name="quantity" Type="int" Nullable="false" />
   </EntityType>
@@ -115,16 +115,6 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
     </Key>
     <Property Name="person_id" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="shift_id" Type="varchar" MaxLength="30" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <Association Name="FK__Account__person___48CFD27E">
     <End Role="Person" Type="Self.Person" Multiplicity="1" />
@@ -163,7 +153,7 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Bill__person_id__5070F446">
-    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
     <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Person">
@@ -270,7 +260,6 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Shift_detail" EntityType="Self.Shift_detail" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Shift_work" EntityType="Self.Shift_work" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Bill_Product" EntityType="Self.Bill_Product" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [Bill_Product].[product_id] AS [product_id], 

@@ -24,8 +24,7 @@ namespace ManageMiniMart
         public string discount_name { get; set; }
         public System.DateTime start_time { get; set; }
         public System.DateTime end_time { get; set; }
-        public string discount_type { get; set; }
-        public Nullable<int> sale { get; set; }
+        public string sale { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }

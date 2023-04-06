@@ -34,7 +34,6 @@ namespace ManageMiniMart
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Shift_detail> Shift_detail { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Bill_Product> Bill_Product { get; set; }
     }
 }
