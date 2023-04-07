@@ -7,25 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManageMiniMart
+namespace ManageMiniMart.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Shift_detail
+    public partial class Account
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Shift_detail()
+        public Account()
         {
-            this.Accounts = new HashSet<Account>();
+            this.Shift_detail = new HashSet<Shift_detail>();
         }
     
+        public string person_id { get; set; }
+        public int role_id { get; set; }
+        public string password { get; set; }
         public string shift_id { get; set; }
-        public string shift_name { get; set; }
-        public System.DateTime start_time { get; set; }
-        public System.DateTime end_time { get; set; }
     
+        public virtual Person Person { get; set; }
+        public virtual Role Role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account> Accounts { get; set; }
+        public virtual ICollection<Shift_detail> Shift_detail { get; set; }
     }
 }

@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManageMiniMart
+namespace ManageMiniMart.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Person
+    public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Person()
+        public Customer()
         {
             this.Bills = new HashSet<Bill>();
         }
     
-        public string person_id { get; set; }
-        public string person_name { get; set; }
-        public Nullable<System.DateTime> birthdate { get; set; }
+        public string customer_id { get; set; }
+        public string customer_name { get; set; }
+        public System.DateTime birthdate { get; set; }
         public string address { get; set; }
-        public string phone_number { get; set; }
-        public double salary { get; set; }
+        public Nullable<int> point { get; set; }
+        public System.DateTime created_time { get; set; }
+        public string email { get; set; }
     
-        public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bills { get; set; }
     }

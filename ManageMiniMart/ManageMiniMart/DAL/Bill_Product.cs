@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManageMiniMart
+namespace ManageMiniMart.DAL
 {
     using System;
     using System.Collections.Generic;

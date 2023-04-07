@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManageMiniMart
+namespace ManageMiniMart.DAL
 {
     using System;
     using System.Data.Entity;
@@ -27,6 +27,7 @@ namespace ManageMiniMart
     
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Bill> Bills { get; set; }
+        public virtual DbSet<Bill_Product> Bill_Product { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Discount> Discounts { get; set; }
@@ -34,6 +35,5 @@ namespace ManageMiniMart
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Shift_detail> Shift_detail { get; set; }
-        public virtual DbSet<Bill_Product> Bill_Product { get; set; }
     }
 }

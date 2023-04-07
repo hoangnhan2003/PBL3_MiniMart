@@ -1,4 +1,5 @@
-﻿using ManageMiniMart.DTO;
+﻿using ManageMiniMart.DAL;
+using ManageMiniMart.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;

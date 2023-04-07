@@ -24,14 +24,10 @@
           <Property Name="created_time" Type="datetime" Nullable="false" />
           <Property Name="payment_method" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Bill_Product">
           <Key>
             <PropertyRef Name="product_id" />
             <PropertyRef Name="bill_id" />
-            <PropertyRef Name="quantity" />
-            <PropertyRef Name="price" />
           </Key>
           <Property Name="product_id" Type="int" Nullable="false" />
           <Property Name="bill_id" Type="int" Nullable="false" />
@@ -256,6 +252,7 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
         <EntityContainer Name="Manage_MinimartModelStoreContainer">
           <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Bill" EntityType="Self.Bill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bill_Product" EntityType="Self.Bill_Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Discount" EntityType="Self.Discount" Schema="dbo" store:Type="Tables" />
@@ -265,14 +262,6 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Shift_detail" EntityType="Self.Shift_detail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Shift_work" EntityType="Self.Shift_work" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Bill_Product" EntityType="Self.Bill_Product" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Bill_Product].[product_id] AS [product_id], 
-    [Bill_Product].[bill_id] AS [bill_id], 
-    [Bill_Product].[quantity] AS [quantity], 
-    [Bill_Product].[price] AS [price]
-    FROM [dbo].[Bill_Product] AS [Bill_Product]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK__Account__person___48CFD27E" Association="Self.FK__Account__person___48CFD27E">
             <End Role="Person" EntitySet="Person" />
             <End Role="Account" EntitySet="Account" />
@@ -348,6 +337,18 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
           <NavigationProperty Name="Person" Relationship="Self.FK__Bill__person_id__5070F446" FromRole="Bill" ToRole="Person" />
           <NavigationProperty Name="Bill_Product" Relationship="Self.FK__Bill_Prod__bill___5441852A" FromRole="Bill" ToRole="Bill_Product" />
         </EntityType>
+        <EntityType Name="Bill_Product">
+          <Key>
+            <PropertyRef Name="product_id" />
+            <PropertyRef Name="bill_id" />
+          </Key>
+          <Property Name="product_id" Type="Int32" Nullable="false" />
+          <Property Name="bill_id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Bill" Relationship="Self.FK__Bill_Prod__bill___5441852A" FromRole="Bill_Product" ToRole="Bill" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__Bill_Prod__produ__534D60F1" FromRole="Bill_Product" ToRole="Product" />
+        </EntityType>
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="category_id" />
@@ -403,8 +404,8 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
           <Property Name="brand" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="price" Type="Double" Nullable="false" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Category" Relationship="Self.FK__Product__categor__38996AB5" FromRole="Product" ToRole="Category" />
           <NavigationProperty Name="Bill_Product" Relationship="Self.FK__Bill_Prod__produ__534D60F1" FromRole="Product" ToRole="Bill_Product" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Product__categor__38996AB5" FromRole="Product" ToRole="Category" />
           <NavigationProperty Name="Discounts" Relationship="Self.Product_Discount" FromRole="Product" ToRole="Discount" />
         </EntityType>
         <EntityType Name="Role">
@@ -424,20 +425,6 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
           <Property Name="start_time" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="end_time" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Accounts" Relationship="Self.Shift_work" FromRole="Shift_detail" ToRole="Account" />
-        </EntityType>
-        <EntityType Name="Bill_Product">
-          <Key>
-            <PropertyRef Name="product_id" />
-            <PropertyRef Name="bill_id" />
-            <PropertyRef Name="quantity" />
-            <PropertyRef Name="price" />
-          </Key>
-          <Property Name="product_id" Type="Int32" Nullable="false" />
-          <Property Name="bill_id" Type="Int32" Nullable="false" />
-          <Property Name="quantity" Type="Int32" Nullable="false" />
-          <Property Name="price" Type="Double" Nullable="false" />
-          <NavigationProperty Name="Bill" Relationship="Self.FK__Bill_Prod__bill___5441852A" FromRole="Bill_Product" ToRole="Bill" />
-          <NavigationProperty Name="Product" Relationship="Self.FK__Bill_Prod__produ__534D60F1" FromRole="Bill_Product" ToRole="Product" />
         </EntityType>
         <Association Name="FK__Account__person___48CFD27E">
           <End Role="Person" Type="Self.Person" Multiplicity="1" />
@@ -499,18 +486,6 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Product__categor__38996AB5">
-          <End Role="Category" Type="Self.Category" Multiplicity="1" />
-          <End Role="Product" Type="Self.Product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Category">
-              <PropertyRef Name="category_id" />
-            </Principal>
-            <Dependent Role="Product">
-              <PropertyRef Name="category_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Bill_Prod__produ__534D60F1">
           <End Role="Product" Type="Self.Product" Multiplicity="1" />
           <End Role="Bill_Product" Type="Self.Bill_Product" Multiplicity="*" />
@@ -520,6 +495,18 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
             </Principal>
             <Dependent Role="Bill_Product">
               <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Product__categor__38996AB5">
+          <End Role="Category" Type="Self.Category" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="category_id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="category_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -534,6 +521,7 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
         <EntityContainer Name="Manage_MinimartEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Bills" EntityType="Self.Bill" />
+          <EntitySet Name="Bill_Product" EntityType="Self.Bill_Product" />
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="Discounts" EntityType="Self.Discount" />
@@ -541,7 +529,6 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="Shift_detail" EntityType="Self.Shift_detail" />
-          <EntitySet Name="Bill_Product" EntityType="Self.Bill_Product" />
           <AssociationSet Name="FK__Account__person___48CFD27E" Association="Self.FK__Account__person___48CFD27E">
             <End Role="Person" EntitySet="People" />
             <End Role="Account" EntitySet="Accounts" />
@@ -562,13 +549,13 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
             <End Role="Bill" EntitySet="Bills" />
             <End Role="Bill_Product" EntitySet="Bill_Product" />
           </AssociationSet>
-          <AssociationSet Name="FK__Product__categor__38996AB5" Association="Self.FK__Product__categor__38996AB5">
-            <End Role="Category" EntitySet="Categories" />
-            <End Role="Product" EntitySet="Products" />
-          </AssociationSet>
           <AssociationSet Name="FK__Bill_Prod__produ__534D60F1" Association="Self.FK__Bill_Prod__produ__534D60F1">
             <End Role="Product" EntitySet="Products" />
             <End Role="Bill_Product" EntitySet="Bill_Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Product__categor__38996AB5" Association="Self.FK__Product__categor__38996AB5">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Product" EntitySet="Products" />
           </AssociationSet>
           <AssociationSet Name="Product_Discount" Association="Self.Product_Discount">
             <End Role="Discount" EntitySet="Discounts" />
@@ -603,6 +590,16 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
                 <ScalarProperty Name="customer_id" ColumnName="customer_id" />
                 <ScalarProperty Name="created_time" ColumnName="created_time" />
                 <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bill_Product">
+            <EntityTypeMapping TypeName="Manage_MinimartModel.Bill_Product">
+              <MappingFragment StoreEntitySet="Bill_Product">
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="price" ColumnName="price" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -677,16 +674,6 @@ warning 6002: The table/view 'Manage_Minimart.dbo.Bill_Product' does not have a 
                 <ScalarProperty Name="shift_name" ColumnName="shift_name" />
                 <ScalarProperty Name="start_time" ColumnName="start_time" />
                 <ScalarProperty Name="end_time" ColumnName="end_time" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Bill_Product">
-            <EntityTypeMapping TypeName="Manage_MinimartModel.Bill_Product">
-              <MappingFragment StoreEntitySet="Bill_Product">
-                <ScalarProperty Name="product_id" ColumnName="product_id" />
-                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
-                <ScalarProperty Name="quantity" ColumnName="quantity" />
-                <ScalarProperty Name="price" ColumnName="price" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

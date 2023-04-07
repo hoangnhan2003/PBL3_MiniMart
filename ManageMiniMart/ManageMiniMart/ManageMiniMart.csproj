@@ -68,24 +68,29 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs">
+    <Compile Include="BLL\BillService.cs" />
+    <Compile Include="BLL\CustomerService.cs" />
+    <Compile Include="BLL\UserService.cs" />
+    <Compile Include="DAL\Account.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Bill.cs">
+    <Compile Include="DAL\Bill.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Bill_Product.cs">
+    <Compile Include="DAL\Bill_Product.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
     <Compile Include="BLL\CategoryService.cs" />
+    <Compile Include="BLL\DiscountService.cs" />
     <Compile Include="BLL\ProductService.cs" />
-    <Compile Include="Category.cs">
+    <Compile Include="BLL\RoleService.cs" />
+    <Compile Include="DAL\Category.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="DAL\Customer.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Discount.cs">
+    <Compile Include="DAL\Discount.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\CBBItem.cs" />
@@ -96,32 +101,44 @@
     <Compile Include="FormActive.Designer.cs">
       <DependentUpon>FormActive.cs</DependentUpon>
     </Compile>
-    <Compile Include="MinimartDB.Context.cs">
+    <Compile Include="DAL\MinimartDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MinimartDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="MinimartDB.cs">
+    <Compile Include="DAL\MinimartDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="MinimartDB.Designer.cs">
+    <Compile Include="DAL\MinimartDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MinimartDB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Person.cs">
+    <Compile Include="DAL\Person.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
+    <Compile Include="DAL\Product.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Role.cs">
+    <Compile Include="DAL\Role.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shift_detail.cs">
+    <Compile Include="DAL\Shift_detail.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddCustomerForm.Designer.cs">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CustomerView.Designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormPayment.cs">
       <SubType>Form</SubType>
@@ -200,11 +217,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="MinimartDB.edmx">
+    <EntityDeploy Include="DAL\MinimartDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MinimartDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="MinimartDB.edmx.diagram">
+    <None Include="DAL\MinimartDB.edmx.diagram">
       <DependentUpon>MinimartDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -230,16 +247,14 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="MinimartDB.Context.tt">
+    <Content Include="DAL\MinimartDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MinimartDB.edmx</DependentUpon>
       <LastGenOutput>MinimartDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="MinimartDB.tt">
+    <Content Include="DAL\MinimartDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MinimartDB.edmx</DependentUpon>
       <LastGenOutput>MinimartDB.cs</LastGenOutput>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageMiniMart.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,15 @@ namespace ManageMiniMart
 {
     public partial class Addproduct : Form
     {
+        private CategoryService categoryService;
+        private DiscountService discountService;
         public Addproduct()
         {
             InitializeComponent();
+            categoryService= new CategoryService();
+            discountService= new DiscountService();
+            cbbCategory.DataSource= categoryService.getAllCatogory();
+            cbbDiscount.DataSource= discountService.GetAllDiscounts();
         }
 
         private void iconButton3_Click(object sender, EventArgs e)

@@ -7,26 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManageMiniMart
+namespace ManageMiniMart.DAL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Discount
+    public partial class Role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Discount()
+        public Role()
         {
-            this.Products = new HashSet<Product>();
+            this.Accounts = new HashSet<Account>();
         }
     
-        public int discount_id { get; set; }
-        public string discount_name { get; set; }
-        public System.DateTime start_time { get; set; }
-        public System.DateTime end_time { get; set; }
-        public string sale { get; set; }
+        public int role_id { get; set; }
+        public string role_name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Account> Accounts { get; set; }
     }
 }
