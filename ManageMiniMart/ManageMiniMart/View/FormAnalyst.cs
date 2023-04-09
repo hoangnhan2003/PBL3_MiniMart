@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ManageMiniMart.View
 {
-    public partial class AddCustomerForm : Form
+    public partial class FormAnalyst : Form
     {
-        public AddCustomerForm()
+        public FormAnalyst()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

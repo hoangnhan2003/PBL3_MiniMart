@@ -14,13 +14,13 @@ using Register_Login;
 
 namespace ManageMiniMart
 {
-    public partial class DoashBoard : Form
+    public partial class Dashboard : Form
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
-        public DoashBoard()
+        public Dashboard()
         {
 
             InitializeComponent();
@@ -43,6 +43,8 @@ namespace ManageMiniMart
             public static Color color4 = Color.FromArgb(95, 77, 221);
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
+            public static Color yellowCustom = Color.FromArgb(255, 212, 59);
+            public static Color greenCustom = Color.FromArgb(91, 166, 65);
         }
         // Method
         private void ActiveButton(object senderBtn, Color color)
@@ -58,7 +60,6 @@ namespace ManageMiniMart
                 currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign= ContentAlignment.MiddleRight;
-
                 // left border button
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0,currentBtn.Location.Y);
@@ -68,7 +69,9 @@ namespace ManageMiniMart
                 iconCurentChildForm.IconChar= currentBtn.IconChar;
                 iconCurentChildForm.IconColor= color;
                 lblTitleChildForm.Text = currentBtn.Text;
-                
+                lblTitleChildForm.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                lblTitleChildForm.ForeColor = color;
+
             }
         }
         private void DisableButton()
@@ -208,7 +211,12 @@ namespace ManageMiniMart
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender, RBGColor.greenCustom);
+        }
 
+        private void btnAnalyst_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RBGColor.yellowCustom);
         }
     }
 }

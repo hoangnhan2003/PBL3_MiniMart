@@ -19,6 +19,11 @@ namespace ManageMiniMart.BLL
         {
             List<CBBItem> cBBItems= new List<CBBItem>();
             var p = db.Categories.ToList();
+            cBBItems.Add(new CBBItem
+            {
+                Text = "All",
+                Value = 0
+            });
             foreach(var a in p)
             {
                 cBBItems.Add(new CBBItem

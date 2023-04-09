@@ -51,15 +51,21 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximun = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtProductId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.cbbDiscount);
@@ -92,6 +98,7 @@
             this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnAdd
             // 
@@ -107,6 +114,7 @@
             this.btnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
             this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cbbDiscount
             // 
@@ -279,6 +287,29 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.label4.Name = "label4";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel5.Controls.Add(this.txtProductId);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // txtProductId
+            // 
+            this.txtProductId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtProductId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtProductId, "txtProductId");
+            this.txtProductId.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtProductId.Name = "txtProductId";
+            this.txtProductId.ReadOnly = true;
+            // 
             // Addproduct
             // 
             resources.ApplyResources(this, "$this");
@@ -300,6 +331,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -328,5 +361,8 @@
         private FontAwesome.Sharp.IconButton btnExit;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox txtProductId;
     }
 }

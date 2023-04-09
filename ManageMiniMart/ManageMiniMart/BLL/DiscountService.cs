@@ -18,6 +18,11 @@ namespace ManageMiniMart.BLL
         public List<CBBItem> GetAllDiscounts() {
             List<CBBItem> list = new List<CBBItem>();
             var p = db.Discounts.Select(o => new { o.discount_id, o.discount_name }).ToList();
+            list.Add(new CBBItem
+            {
+                Value = 0,
+                Text = "None"
+            });
             foreach (var item in p)
             {
                 list.Add(new CBBItem { 
@@ -25,6 +30,11 @@ namespace ManageMiniMart.BLL
                 });
             }
             return list;
+        }
+        public Discount getById(int id)
+        {
+            var s1 = db.Discounts.Where(o => o.discount_id == id).FirstOrDefault();
+            return s1;
         }
     }
 }

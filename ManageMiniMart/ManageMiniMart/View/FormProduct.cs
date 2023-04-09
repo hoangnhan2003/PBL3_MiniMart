@@ -1,4 +1,6 @@
 ﻿using ManageMiniMart.BLL;
+using ManageMiniMart.DAL;
+using ManageMiniMart.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +45,47 @@ namespace ManageMiniMart
             //OpenChildForm(new Addproduct());
             Addproduct addproduct = new Addproduct();
             addproduct.ShowDialog();
+            dgvProduct.DataSource = productService.getAllProduct();
+        }
+
+        private void cbbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int cateId = ((CBBItem)cbbCategory.SelectedItem).Value;
+            string productName = txtProductName.Text;
+            if(cateId > 0 )
+            {
+                dgvProduct.DataSource = productService.findByProductNameAndCategory(cateId,productName);
+            }
+            else
+            {
+                dgvProduct.DataSource = productService.findByName(productName);
+            }
+            
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            int cID = ((CBBItem)cbbCategory.SelectedItem).Value;
+            if(cID == 0)
+            {
+                dgvProduct.DataSource = productService.findByName(txtProductName.Text);
+            }
+            else
+            {
+                dgvProduct.DataSource = productService.findByProductNameAndCategory(cID,txtProductName.Text);
+            }
+            
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string id = dgvProduct.SelectedRows[0].Cells[0].Value.ToString();
+
+            Product product = productService.findById(Convert.ToInt16(id));
+            Addproduct addproduct = new Addproduct();
+            addproduct.editProduct(product);
+            addproduct.ShowDialog();
+            dgvProduct.DataSource = productService.getAllProduct();
         }
     }
 }

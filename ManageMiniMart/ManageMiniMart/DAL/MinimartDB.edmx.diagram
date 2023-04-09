@@ -6,12 +6,12 @@
     <edmx:Diagrams>
       <Diagram DiagramId="b5a7b270a3034019a8b5a3787486e32e" Name="Diagram1">
         <EntityTypeShape EntityType="Manage_MinimartModel.Account" Width="1.5" PointX="3.625" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Bill" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Bill" Width="1.5" PointX="3.875" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Manage_MinimartModel.Bill_Product" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Manage_MinimartModel.Category" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Customer" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Customer" Width="1.5" PointX="1" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Manage_MinimartModel.Discount" Width="1.5" PointX="0.875" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Person" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Person" Width="1.5" PointX="1" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Manage_MinimartModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Manage_MinimartModel.Role" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Manage_MinimartModel.Shift_detail" Width="1.5" PointX="6.75" PointY="13.375" IsExpanded="true" />

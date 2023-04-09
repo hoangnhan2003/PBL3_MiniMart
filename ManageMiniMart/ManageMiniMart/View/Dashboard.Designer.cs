@@ -1,6 +1,6 @@
 ﻿namespace ManageMiniMart
 {
-    partial class DoashBoard
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoashBoard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.btnEmployee = new FontAwesome.Sharp.IconButton();
-            this.btnSetting = new FontAwesome.Sharp.IconButton();
+            this.btnAnalyst = new FontAwesome.Sharp.IconButton();
+            this.btnCustomer = new FontAwesome.Sharp.IconButton();
             this.btnDiscount = new FontAwesome.Sharp.IconButton();
             this.BtnInvoice = new FontAwesome.Sharp.IconButton();
             this.BtnProduct = new FontAwesome.Sharp.IconButton();
@@ -46,8 +48,6 @@
             this.iconCurentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btnCustomer = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,10 +58,10 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(68)))));
-            this.panelMenu.Controls.Add(this.btnCustomer);
-            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.btnLogin);
             this.panelMenu.Controls.Add(this.btnEmployee);
-            this.panelMenu.Controls.Add(this.btnSetting);
+            this.panelMenu.Controls.Add(this.btnAnalyst);
+            this.panelMenu.Controls.Add(this.btnCustomer);
             this.panelMenu.Controls.Add(this.btnDiscount);
             this.panelMenu.Controls.Add(this.BtnInvoice);
             this.panelMenu.Controls.Add(this.BtnProduct);
@@ -73,6 +73,29 @@
             this.panelMenu.Size = new System.Drawing.Size(200, 710);
             this.panelMenu.TabIndex = 0;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.btnLogin.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogin.IconSize = 35;
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(0, 506);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Padding = new System.Windows.Forms.Padding(10);
+            this.btnLogin.Size = new System.Drawing.Size(200, 57);
+            this.btnLogin.TabIndex = 8;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // btnEmployee
             // 
             this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
@@ -80,44 +103,67 @@
             this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployee.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployee.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEmployee.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.btnEmployee.IconChar = FontAwesome.Sharp.IconChar.PersonCircleCheck;
             this.btnEmployee.IconColor = System.Drawing.Color.Gainsboro;
             this.btnEmployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEmployee.IconSize = 35;
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 398);
+            this.btnEmployee.Location = new System.Drawing.Point(0, 449);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Padding = new System.Windows.Forms.Padding(10);
-            this.btnEmployee.Size = new System.Drawing.Size(200, 51);
-            this.btnEmployee.TabIndex = 6;
+            this.btnEmployee.Size = new System.Drawing.Size(200, 57);
+            this.btnEmployee.TabIndex = 7;
             this.btnEmployee.Text = "Employee";
             this.btnEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmployee.UseVisualStyleBackColor = true;
-            this.btnEmployee.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnEmployee.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // btnSetting
+            // btnAnalyst
             // 
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Gears;
-            this.btnSetting.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSetting.IconSize = 35;
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 341);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(10);
-            this.btnSetting.Size = new System.Drawing.Size(200, 57);
-            this.btnSetting.TabIndex = 5;
-            this.btnSetting.Text = "Info";
-            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSetting.UseVisualStyleBackColor = true;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnAnalyst.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAnalyst.FlatAppearance.BorderSize = 0;
+            this.btnAnalyst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnalyst.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalyst.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAnalyst.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
+            this.btnAnalyst.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnAnalyst.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAnalyst.IconSize = 35;
+            this.btnAnalyst.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnalyst.Location = new System.Drawing.Point(0, 398);
+            this.btnAnalyst.Name = "btnAnalyst";
+            this.btnAnalyst.Padding = new System.Windows.Forms.Padding(10);
+            this.btnAnalyst.Size = new System.Drawing.Size(200, 51);
+            this.btnAnalyst.TabIndex = 6;
+            this.btnAnalyst.Text = "Analyst";
+            this.btnAnalyst.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnalyst.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAnalyst.UseVisualStyleBackColor = true;
+            this.btnAnalyst.Click += new System.EventHandler(this.btnAnalyst_Click);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCustomer.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnCustomer.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCustomer.IconSize = 35;
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 341);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(10);
+            this.btnCustomer.Size = new System.Drawing.Size(200, 57);
+            this.btnCustomer.TabIndex = 5;
+            this.btnCustomer.Text = "Customer";
+            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // btnDiscount
             // 
@@ -346,52 +392,7 @@
             this.panelDesktop.Size = new System.Drawing.Size(834, 626);
             this.panelDesktop.TabIndex = 3;
             // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.StarHalfAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 449);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10);
-            this.iconButton1.Size = new System.Drawing.Size(200, 57);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.Text = "Login";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomer.FlatAppearance.BorderSize = 0;
-            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCustomer.IconChar = FontAwesome.Sharp.IconChar.StarHalfAlt;
-            this.btnCustomer.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCustomer.IconSize = 35;
-            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 506);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Padding = new System.Windows.Forms.Padding(10);
-            this.btnCustomer.Size = new System.Drawing.Size(200, 57);
-            this.btnCustomer.TabIndex = 8;
-            this.btnCustomer.Text = "Customer";
-            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCustomer.UseVisualStyleBackColor = true;
-            // 
-            // DoashBoard
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -402,7 +403,7 @@
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "DoashBoard";
+            this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panelMenu.ResumeLayout(false);
@@ -418,8 +419,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnEmployee;
-        private FontAwesome.Sharp.IconButton btnSetting;
+        private FontAwesome.Sharp.IconButton btnAnalyst;
+        private FontAwesome.Sharp.IconButton btnCustomer;
         private FontAwesome.Sharp.IconButton btnDiscount;
         private FontAwesome.Sharp.IconButton BtnInvoice;
         private FontAwesome.Sharp.IconButton BtnProduct;
@@ -434,8 +435,8 @@
         private FontAwesome.Sharp.IconButton btnMinimize;
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelDesktop;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton btnCustomer;
+        private FontAwesome.Sharp.IconButton btnEmployee;
+        private FontAwesome.Sharp.IconButton btnLogin;
     }
 }
 

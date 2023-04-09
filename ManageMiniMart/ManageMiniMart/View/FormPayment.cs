@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ManageMiniMart.BLL;
+using ManageMiniMart.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,27 @@ namespace ManageMiniMart
 {
     public partial class FormPayment : Form
     {
+        private ProductService productService;
+        private CustomerService customerService;
+        private BillService billService;
+        private List<ProductDTO> listProduct;
         public FormPayment()
         {
             InitializeComponent();
+            productService = new ProductService();
+            customerService = new CustomerService();
+            billService = new BillService();
+            cbbPayment.DataSource = getCBBMethodPay();
+            cbbCustomer.DataSource = customerService.getAllCBB();
+            cbbProduct.DataSource = productService.getAllCBB();
+            
+        }
+        public List<string> getCBBMethodPay()
+        {
+            List<string> strings = new List<string>();
+            strings.Add("Cash");
+            strings.Add("Bank account");
+            return strings;
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -28,6 +48,11 @@ namespace ManageMiniMart
         }
 
         private void txtAmountProduct_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
 
         }
