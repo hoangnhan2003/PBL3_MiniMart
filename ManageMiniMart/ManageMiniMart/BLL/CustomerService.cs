@@ -2,6 +2,7 @@
 using ManageMiniMart.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Security.Cryptography.Xml;
 using System.Text;
@@ -11,10 +12,10 @@ namespace ManageMiniMart.BLL
 {
     internal class CustomerService
     {
-        private MinimartDatabase db;
+        private Manage_MinimartEntities db;
         public CustomerService()
         {
-            db = new MinimartDatabase();
+            db = new Manage_MinimartEntities();
         }
         public List<CustomerView> convertToCustomerView(List<Customer> customers) {
             List<CustomerView> result = new List<CustomerView>();
@@ -63,6 +64,27 @@ namespace ManageMiniMart.BLL
             cBBPeople.Reverse();
             return cBBPeople;
 
+        }
+        
+        public void save(Customer customer)
+        {
+            db.Customers.AddOrUpdate(customer);
+            db.SaveChanges();
+        }
+        public void delete(Customer customer)
+        {
+            db.Customers.Remove(customer);
+            db.SaveChanges();
+        }
+        public Customer findById(string id)
+        {
+            return db.Customers.Find(id);
+        }
+        public List<CustomerView> findByName(string name)
+        {
+            var p = db.Customers.Where( c => c.customer_name.Contains(name)).ToList();
+            List<CustomerView> customerViews= convertToCustomerView(p);
+            return customerViews;
         }
     }
 }

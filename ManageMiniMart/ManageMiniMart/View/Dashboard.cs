@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using ManageMiniMart.View;
 using Register_Login;
 
 namespace ManageMiniMart
@@ -89,7 +90,7 @@ namespace ManageMiniMart
         private void OpenChildForm(Form childForm)
         {
             if(currentChildForm!= null) {
-                currentChildForm.Close();
+                currentChildForm.Dispose();
             }
             currentChildForm= childForm;
             childForm.TopLevel = false;
@@ -99,7 +100,7 @@ namespace ManageMiniMart
             panelDesktop.Tag= childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitleChildForm.Text = childForm.Text;
+            //lblTitleChildForm.Text = childForm.Text;
         }
 
         private void btnDashBoard_Click(object sender, EventArgs e)
@@ -217,6 +218,7 @@ namespace ManageMiniMart
         private void btnAnalyst_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.yellowCustom);
+            OpenChildForm(new FormAnalyst());
         }
     }
 }

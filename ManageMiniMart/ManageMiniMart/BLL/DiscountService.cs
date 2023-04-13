@@ -10,10 +10,10 @@ namespace ManageMiniMart.BLL
 {
     internal class DiscountService
     {
-        private MinimartDatabase db;
+        private Manage_MinimartEntities db;
         public DiscountService()
         {
-            db = new MinimartDatabase();
+            db = new Manage_MinimartEntities();
         }
         public List<CBBItem> GetAllDiscounts() {
             List<CBBItem> list = new List<CBBItem>();

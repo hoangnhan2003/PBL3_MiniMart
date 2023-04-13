@@ -13,9 +13,9 @@ namespace ManageMiniMart.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MinimartDatabase : DbContext
+    public partial class Manage_MinimartEntities : DbContext
     {
-        public MinimartDatabase()
+        public Manage_MinimartEntities()
             : base("name=Manage_MinimartEntities")
         {
         }

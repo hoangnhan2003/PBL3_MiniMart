@@ -1,4 +1,5 @@
 ﻿using ManageMiniMart.BLL;
+using ManageMiniMart.Custom;
 using ManageMiniMart.DAL;
 using ManageMiniMart.DTO;
 using System;
@@ -9,6 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace ManageMiniMart
@@ -85,6 +87,34 @@ namespace ManageMiniMart
             Addproduct addproduct = new Addproduct();
             addproduct.editProduct(product);
             addproduct.ShowDialog();
+            dgvProduct.DataSource = productService.getAllProduct();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string strings = "";
+            int i = 0;
+            List<int> productId = new List<int>();
+            foreach (object s in dgvProduct.SelectedRows)
+            {
+                strings += dgvProduct.SelectedRows[i].Cells[1].Value.ToString();
+                productId.Add(Convert.ToInt32(dgvProduct.SelectedRows[i].Cells[0].Value.ToString()));
+                i++;
+            }
+            MyMessageBox messageBox = new MyMessageBox();
+            DialogResult rs = messageBox.show("Are you sure delete " + strings, "Confirm delete", MyMessageBox.TypeMessage.YESNO,MyMessageBox.TypeIcon.QUESTION);
+
+            if(rs == DialogResult.Yes)
+            {
+                foreach(int id in productId)
+                {
+                    productService.deleteProduct(productService.findById(id));
+                }
+            }
+            else
+            {
+
+            }
             dgvProduct.DataSource = productService.getAllProduct();
         }
     }

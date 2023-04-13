@@ -10,10 +10,10 @@ namespace ManageMiniMart.BLL
 {
     internal class CategoryService
     {
-        private MinimartDatabase db;
+        private Manage_MinimartEntities db;
         public CategoryService()
         {
-            db = new MinimartDatabase();    
+            db = new Manage_MinimartEntities();    
         }
         public List<CBBItem> getAllCatogory()
         {

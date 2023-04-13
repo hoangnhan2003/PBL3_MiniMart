@@ -1,4 +1,5 @@
 ﻿using ManageMiniMart.BLL;
+using ManageMiniMart.DAL;
 using ManageMiniMart.DTO;
 using System;
 using System.Collections.Generic;
@@ -24,9 +25,8 @@ namespace ManageMiniMart
             productService = new ProductService();
             customerService = new CustomerService();
             billService = new BillService();
+            listProduct= new List<ProductDTO>();
             cbbPayment.DataSource = getCBBMethodPay();
-            cbbCustomer.DataSource = customerService.getAllCBB();
-            cbbProduct.DataSource = productService.getAllCBB();
             
         }
         public List<string> getCBBMethodPay()
@@ -54,7 +54,11 @@ namespace ManageMiniMart
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            int id = Convert.ToInt32(txtProductId.Text);
+            Product product = productService.findById(id);
+            ProductDTO product1 = productService.convertProductDTO(product);
+            listProduct.Add(product1);
+            dgvProduct.DataSource = listProduct;
         }
     }
 }

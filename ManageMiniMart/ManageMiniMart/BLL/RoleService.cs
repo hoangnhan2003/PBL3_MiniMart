@@ -10,9 +10,9 @@ namespace ManageMiniMart.BLL
 {
     internal class RoleService
     {
-        private MinimartDatabase db;
+        private Manage_MinimartEntities db;
         public RoleService() {
-            db = new MinimartDatabase();
+            db = new Manage_MinimartEntities();
         }
         public List<CBBItem> GetRoles()
         {

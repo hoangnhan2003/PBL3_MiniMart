@@ -14,9 +14,9 @@ namespace ManageMiniMart.BLL
     
     internal class ProductService
     {
-        private MinimartDatabase db;
+        private Manage_MinimartEntities db;
         public ProductService() { 
-            db = new MinimartDatabase();
+            db = new Manage_MinimartEntities();
         }
         public List<ProductDTO> getAllProduct()
         {
@@ -65,7 +65,7 @@ namespace ManageMiniMart.BLL
         }
         public void insertProduct(Product product)
         {
-            using (MinimartDatabase d = db)
+            using (Manage_MinimartEntities d = db)
             {
                 d.Products.Add(product);
                 d.SaveChanges();

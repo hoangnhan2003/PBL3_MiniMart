@@ -67,15 +67,9 @@ namespace ManageMiniMart
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Product product = new Product {
-                product_name = txtProductName.Text,
-                price = Convert.ToDouble(txtPrice.Text),
-                brand = txtBrand.Text,
-                quantity = Convert.ToInt16(txtQuantity.Text),
-                category_id = ((CBBItem)cbbCategory.SelectedItem).Value
-            };
+           
             int discount_id = ((CBBItem)cbbDiscount.SelectedItem).Value;
-            if(discount_id > 0)
+            if (discount_id > 0)
             {
                 Discount discount = discountService.getById(discount_id);
                 List<Discount> discounts = new List<Discount>();
@@ -87,12 +81,24 @@ namespace ManageMiniMart
                     brand = txtBrand.Text,
                     quantity = Convert.ToInt16(txtQuantity.Text),
                     category_id = ((CBBItem)cbbCategory.SelectedItem).Value,
-                    
                 };
                 product1.Discounts.Add(discount);
+                int idDiscount = discount.discount_id;
                 productService.Save(product1);
             }
-            productService.Save(product);
+            else
+            {
+                Product product = new Product
+                {
+                    product_name = txtProductName.Text,
+                    price = Convert.ToDouble(txtPrice.Text),
+                    brand = txtBrand.Text,
+                    quantity = Convert.ToInt16(txtQuantity.Text),
+                    category_id = ((CBBItem)cbbCategory.SelectedItem).Value
+                };
+
+                productService.Save(product);
+            }
             Close();
         }
 
