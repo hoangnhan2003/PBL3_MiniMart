@@ -35,23 +35,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtBrand = new System.Windows.Forms.TextBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.dtpBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximun = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -73,6 +75,7 @@
             this.btnCancel.TabIndex = 20;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnAdd
             // 
@@ -86,12 +89,14 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAdd.Location = new System.Drawing.Point(161, 521);
+            this.btnAdd.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnAdd.Location = new System.Drawing.Point(168, 521);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(131, 45);
+            this.btnAdd.Size = new System.Drawing.Size(114, 45);
             this.btnAdd.TabIndex = 21;
-            this.btnAdd.Text = "ADD";
+            this.btnAdd.Text = "SAVE";
+            this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 
@@ -113,7 +118,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(157, 311);
+            this.label3.Location = new System.Drawing.Point(157, 313);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 23);
             this.label3.TabIndex = 17;
@@ -136,24 +141,24 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel4.Controls.Add(this.txtQuantity);
-            this.panel4.Location = new System.Drawing.Point(321, 306);
+            this.panel4.Controls.Add(this.txtAddress);
+            this.panel4.Location = new System.Drawing.Point(321, 311);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(199, 28);
             this.panel4.TabIndex = 16;
             // 
-            // txtQuantity
+            // txtAddress
             // 
-            this.txtQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtQuantity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtQuantity.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtQuantity.Location = new System.Drawing.Point(0, 0);
-            this.txtQuantity.Multiline = true;
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(199, 25);
-            this.txtQuantity.TabIndex = 0;
+            this.txtAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtAddress.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtAddress.Location = new System.Drawing.Point(0, 0);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(199, 25);
+            this.txtAddress.TabIndex = 0;
             // 
             // label5
             // 
@@ -184,46 +189,46 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel3.Controls.Add(this.txtBrand);
+            this.panel3.Controls.Add(this.txtCustomerName);
             this.panel3.Location = new System.Drawing.Point(319, 190);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(199, 28);
             this.panel3.TabIndex = 9;
             // 
-            // txtBrand
+            // txtCustomerName
             // 
-            this.txtBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtBrand.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBrand.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtBrand.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtBrand.Location = new System.Drawing.Point(0, 0);
-            this.txtBrand.Multiline = true;
-            this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(199, 25);
-            this.txtBrand.TabIndex = 0;
+            this.txtCustomerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustomerName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCustomerName.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtCustomerName.Location = new System.Drawing.Point(0, 0);
+            this.txtCustomerName.Multiline = true;
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(199, 25);
+            this.txtCustomerName.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel2.Controls.Add(this.txtProductName);
+            this.panel2.Controls.Add(this.txtCustomerId);
             this.panel2.Location = new System.Drawing.Point(319, 134);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(199, 28);
             this.panel2.TabIndex = 10;
             // 
-            // txtProductName
+            // txtCustomerId
             // 
-            this.txtProductName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtProductName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProductName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtProductName.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtProductName.Location = new System.Drawing.Point(0, 0);
-            this.txtProductName.Multiline = true;
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(199, 25);
-            this.txtProductName.TabIndex = 0;
+            this.txtCustomerId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtCustomerId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustomerId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtCustomerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCustomerId.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtCustomerId.Location = new System.Drawing.Point(0, 0);
+            this.txtCustomerId.Multiline = true;
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.Size = new System.Drawing.Size(199, 25);
+            this.txtCustomerId.TabIndex = 0;
             // 
             // dtpBirthdate
             // 
@@ -240,6 +245,28 @@
             this.dtpBirthdate.TabIndex = 0;
             this.dtpBirthdate.Value = new System.DateTime(2023, 4, 8, 22, 56, 26, 751);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Location = new System.Drawing.Point(318, 377);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(199, 28);
+            this.panel1.TabIndex = 25;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtEmail.Location = new System.Drawing.Point(0, 0);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(199, 25);
+            this.txtEmail.TabIndex = 0;
+            // 
             // btnMinimize
             // 
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -251,11 +278,10 @@
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 30;
-            this.btnMinimize.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnMinimize.Location = new System.Drawing.Point(682, 12);
+            this.btnMinimize.Location = new System.Drawing.Point(690, 21);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(27, 30);
-            this.btnMinimize.TabIndex = 22;
+            this.btnMinimize.TabIndex = 26;
             this.btnMinimize.UseVisualStyleBackColor = true;
             // 
             // btnMaximun
@@ -269,11 +295,10 @@
             this.btnMaximun.IconColor = System.Drawing.Color.White;
             this.btnMaximun.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximun.IconSize = 30;
-            this.btnMaximun.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnMaximun.Location = new System.Drawing.Point(715, 12);
+            this.btnMaximun.Location = new System.Drawing.Point(718, 21);
             this.btnMaximun.Name = "btnMaximun";
             this.btnMaximun.Size = new System.Drawing.Size(27, 30);
-            this.btnMaximun.TabIndex = 23;
+            this.btnMaximun.TabIndex = 27;
             this.btnMaximun.UseVisualStyleBackColor = true;
             // 
             // btnExit
@@ -287,45 +312,33 @@
             this.btnExit.IconColor = System.Drawing.Color.White;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 30;
-            this.btnExit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExit.Location = new System.Drawing.Point(748, 12);
+            this.btnExit.Location = new System.Drawing.Point(741, 21);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(28, 30);
-            this.btnExit.TabIndex = 24;
+            this.btnExit.TabIndex = 28;
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // panel1
+            // panel5
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(318, 377);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 28);
-            this.panel1.TabIndex = 25;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 25);
-            this.textBox1.TabIndex = 0;
+            this.panel5.Controls.Add(this.btnMinimize);
+            this.panel5.Controls.Add(this.btnExit);
+            this.panel5.Controls.Add(this.btnMaximun);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(807, 90);
+            this.panel5.TabIndex = 29;
+            this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // AddCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(800, 617);
+            this.ClientSize = new System.Drawing.Size(807, 617);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnMinimize);
-            this.Controls.Add(this.btnMaximun);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.dtpBirthdate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
@@ -349,6 +362,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,18 +376,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtBrand;
+        private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.TextBox txtCustomerId;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthdate;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtEmail;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnMaximun;
         private FontAwesome.Sharp.IconButton btnExit;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel5;
     }
 }

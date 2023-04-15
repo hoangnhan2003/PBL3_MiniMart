@@ -88,6 +88,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Product_Discount">
+      <EntityTypeMapping TypeName="Manage_MinimartModel.Product_Discount">
+        <MappingFragment StoreEntitySet="Product_Discount">
+          <ScalarProperty Name="product_discount_id" ColumnName="product_discount_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="discount_id" ColumnName="discount_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Roles">
       <EntityTypeMapping TypeName="Manage_MinimartModel.Role">
         <MappingFragment StoreEntitySet="Role">
@@ -106,21 +115,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="Product_Discount" TypeName="Manage_MinimartModel.Product_Discount" StoreEntitySet="Product_Discount">
-      <EndProperty Name="Discount">
-        <ScalarProperty Name="discount_id" ColumnName="discount_id" />
-      </EndProperty>
-      <EndProperty Name="Product">
-        <ScalarProperty Name="product_id" ColumnName="product_id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="Shift_work" TypeName="Manage_MinimartModel.Shift_work" StoreEntitySet="Shift_work">
-      <EndProperty Name="Account">
-        <ScalarProperty Name="person_id" ColumnName="person_id" />
-      </EndProperty>
-      <EndProperty Name="Shift_detail">
-        <ScalarProperty Name="shift_id" ColumnName="shift_id" />
-      </EndProperty>
-    </AssociationSetMapping>
+    <EntitySetMapping Name="Shift_work">
+      <EntityTypeMapping TypeName="Manage_MinimartModel.Shift_work">
+        <MappingFragment StoreEntitySet="Shift_work">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="shift_id" ColumnName="shift_id" />
+          <ScalarProperty Name="check_done" ColumnName="check_done" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

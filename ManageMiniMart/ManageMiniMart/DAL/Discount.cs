@@ -17,16 +17,16 @@ namespace ManageMiniMart.DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Discount()
         {
-            this.Products = new HashSet<Product>();
+            this.Product_Discount = new HashSet<Product_Discount>();
         }
     
         public int discount_id { get; set; }
         public string discount_name { get; set; }
         public System.DateTime start_time { get; set; }
         public System.DateTime end_time { get; set; }
-        public string sale { get; set; }
+        public Nullable<int> sale { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product_Discount> Product_Discount { get; set; }
     }
 }

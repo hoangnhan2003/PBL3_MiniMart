@@ -4,26 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b5a7b270a3034019a8b5a3787486e32e" Name="Diagram1">
-        <EntityTypeShape EntityType="Manage_MinimartModel.Account" Width="1.5" PointX="4.625" PointY="13.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Bill" Width="1.5" PointX="6.125" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Bill_Product" Width="1.5" PointX="8.375" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Category" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Customer" Width="1.5" PointX="2.25" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Discount" Width="1.5" PointX="2.25" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Person" Width="1.5" PointX="1.5" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Product" Width="1.5" PointX="5.5" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Role" Width="1.5" PointX="1.875" PointY="14.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Manage_MinimartModel.Shift_detail" Width="1.5" PointX="8.125" PointY="12.75" IsExpanded="true" />
+      <Diagram DiagramId="cb7bc189f13040cabd1c1acb58b5d544" Name="Diagram1">
+        <EntityTypeShape EntityType="Manage_MinimartModel.Account" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Bill" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Bill_Product" Width="1.5" PointX="5.375" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Category" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Customer" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Discount" Width="1.5" PointX="3.625" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Person" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Product" Width="1.5" PointX="3.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Product_Discount" Width="1.5" PointX="7.125" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Role" Width="1.5" PointX="0.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Shift_detail" Width="1.5" PointX="3" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manage_MinimartModel.Shift_work" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
         <AssociationConnector Association="Manage_MinimartModel.FK__Account__person___48CFD27E" ManuallyRouted="false" />
         <AssociationConnector Association="Manage_MinimartModel.FK__Account__role_id__49C3F6B7" ManuallyRouted="false" />
-        <AssociationConnector Association="Manage_MinimartModel.FK__Bill__customer_i__5165187F" ManuallyRouted="false" />
-        <AssociationConnector Association="Manage_MinimartModel.FK__Bill__person_id__5070F446" ManuallyRouted="false" />
-        <AssociationConnector Association="Manage_MinimartModel.FK__Bill_Prod__bill___5441852A" ManuallyRouted="false" />
-        <AssociationConnector Association="Manage_MinimartModel.FK__Bill_Prod__produ__534D60F1" ManuallyRouted="false" />
-        <AssociationConnector Association="Manage_MinimartModel.FK__Product__categor__38996AB5" ManuallyRouted="false" />
-        <AssociationConnector Association="Manage_MinimartModel.Product_Discount" ManuallyRouted="false" />
-        <AssociationConnector Association="Manage_MinimartModel.Shift_work" ManuallyRouted="false" />
+        <AssociationConnector Association="Manage_MinimartModel.FK__Shift_wor__perso__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Manage_MinimartModel.FK__Bill__customer_i__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="Manage_MinimartModel.FK__Bill__person_id__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="Manage_MinimartModel.FK__Bill_Prod__bill___5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="Manage_MinimartModel.FK__Bill_Prod__produ__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="Manage_MinimartModel.FK__Product__categor__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="Manage_MinimartModel.FK__Product_D__disco__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="Manage_MinimartModel.FK__Product_D__produ__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="Manage_MinimartModel.FK__Shift_wor__shift__4E88ABD4" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -9,14 +9,17 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace ManageMiniMart
 {
+    public delegate void ReloadFormProduct();
     public partial class FormProduct : Form
     {
+        private ProductDiscountService productDiscountService;
         private Form currentChildForm;
         private ProductService productService;
         private CategoryService categoryService;
@@ -26,7 +29,8 @@ namespace ManageMiniMart
             productService = new ProductService();
             categoryService= new CategoryService();
             cbbCategory.DataSource = categoryService.getAllCatogory();
-            dgvProduct.DataSource = productService.getAllProduct();
+            loadAllProduct();
+            productDiscountService = new ProductDiscountService();
         }
         public void OpenChildForm(Form form) { 
             if(currentChildForm != null)
@@ -45,9 +49,9 @@ namespace ManageMiniMart
         private void iconButton1_Click(object sender, EventArgs e)
         {
             //OpenChildForm(new Addproduct());
-            Addproduct addproduct = new Addproduct();
+            Addproduct addproduct = new Addproduct(loadAllProduct);
             addproduct.ShowDialog();
-            dgvProduct.DataSource = productService.getAllProduct();
+            //loadAllProduct();
         }
 
         private void cbbCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -78,16 +82,21 @@ namespace ManageMiniMart
             }
             
         }
-
+        private void loadAllProduct()
+        {
+            dgvProduct.DataSource = null;
+            dgvProduct.DataSource = productService.getAllProduct();
+            dgvProduct.RefreshEdit();
+        }
         private void btnEdit_Click(object sender, EventArgs e)
         {
             string id = dgvProduct.SelectedRows[0].Cells[0].Value.ToString();
 
             Product product = productService.findById(Convert.ToInt16(id));
-            Addproduct addproduct = new Addproduct();
+            Addproduct addproduct = new Addproduct(loadAllProduct);
             addproduct.editProduct(product);
             addproduct.ShowDialog();
-            dgvProduct.DataSource = productService.getAllProduct();
+            //this.loadAllProduct();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -106,16 +115,17 @@ namespace ManageMiniMart
 
             if(rs == DialogResult.Yes)
             {
-                foreach(int id in productId)
+                
+                foreach (int id in productId)
                 {
-                    productService.deleteProduct(productService.findById(id));
+                    productService.deleteProduct(id);
                 }
             }
             else
             {
 
             }
-            dgvProduct.DataSource = productService.getAllProduct();
+            loadAllProduct();
         }
     }
 }

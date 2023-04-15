@@ -21,7 +21,6 @@ namespace ManageMiniMart.BLL
         public List<ProductDTO> getAllProduct()
         {
             List<ProductDTO> products = new List<ProductDTO>();
-            var disocuntList = db.Discounts.Select(p => p);
             var l = db.Products.ToList();
             products = convertListDTO(l);
             return products;
@@ -33,19 +32,21 @@ namespace ManageMiniMart.BLL
             foreach (var product in productList)
             {
                 string sale = "";
-                foreach (Discount d in product.Discounts)
+                foreach(var discount in product.Product_Discount)
                 {
-                    sale += Convert.ToString(d.sale) + " , ";
+                    sale += discount.Discount.discount_name + " ";
                 }
-                products.Add(new ProductDTO {
+
+                products.Add(new ProductDTO
+                {
                     ProductId = product.product_id,
-                    Name= product.product_name,
-                    Price= product.price,
-                    Quantity= product.quantity,
+                    Name = product.product_name,
+                    Price = product.price,
+                    Quantity = product.quantity,
                     Category_name = product.Category.category_name,
                     Brand = product.brand,
                     Sale = sale
-                });
+                }) ;
             }
             return products;
         }
@@ -71,10 +72,17 @@ namespace ManageMiniMart.BLL
                 d.SaveChanges();
             }
         }
-        public void deleteProduct(Product product)
+        public void deleteProduct(int id)
         {
-            db.Products.Remove(product);
+            var productDiscount = db.Product_Discount.Where(p => p.product_id == id).ToList();
+            db.Product_Discount.RemoveRange(productDiscount);
+            var product = db.Products.Where(p => p.product_id.Equals(id)).ToList();
+            db.Products.RemoveRange(product);
             db.SaveChanges();
+        }
+        public void deleteProductById(int productId)
+        {
+            
         }
         public void Save(Product product) {
             db.Products.AddOrUpdate(product);
@@ -103,9 +111,9 @@ namespace ManageMiniMart.BLL
         public ProductDTO convertProductDTO(Product product)
         {
             string sale = "";
-            foreach (Discount d in product.Discounts)
+            foreach(var discount in product.Product_Discount)
             {
-                sale += Convert.ToString(d.sale) + " , ";
+                sale += discount.Discount.discount_name + " ";
             }
             return new ProductDTO
             {

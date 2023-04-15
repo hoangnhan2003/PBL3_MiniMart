@@ -47,6 +47,7 @@ namespace ManageMiniMart.View
                 }
                 series.Add(new LineSeries()
                 {
+           
                     Title = i.ToString(),
                     Values = new ChartValues<double>(values)
                 });

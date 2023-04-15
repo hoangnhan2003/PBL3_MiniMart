@@ -17,7 +17,7 @@
     <Property Name="person_id" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="customer_id" Type="varchar" MaxLength="12" />
     <Property Name="created_time" Type="datetime" Nullable="false" />
-    <Property Name="payment_method" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="payment_method" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Bill_Product">
     <Key>
@@ -56,7 +56,7 @@
     <Property Name="discount_name" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="start_time" Type="date" Nullable="false" />
     <Property Name="end_time" Type="date" Nullable="false" />
-    <Property Name="sale" Type="nvarchar" MaxLength="150" />
+    <Property Name="sale" Type="int" />
   </EntityType>
   <EntityType Name="Person">
     <Key>
@@ -82,9 +82,9 @@
   </EntityType>
   <EntityType Name="Product_Discount">
     <Key>
-      <PropertyRef Name="product_id" />
-      <PropertyRef Name="discount_id" />
+      <PropertyRef Name="product_discount_id" />
     </Key>
+    <Property Name="product_discount_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="product_id" Type="int" Nullable="false" />
     <Property Name="discount_id" Type="int" Nullable="false" />
   </EntityType>
@@ -111,6 +111,7 @@
     </Key>
     <Property Name="person_id" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="shift_id" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="check_done" Type="bit" />
   </EntityType>
   <Association Name="FK__Account__person___48CFD27E">
     <End Role="Person" Type="Self.Person" Multiplicity="1" />
@@ -136,7 +137,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Bill__customer_i__5165187F">
+  <Association Name="FK__Bill__customer_i__52593CB8">
     <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
     <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
     <ReferentialConstraint>
@@ -148,7 +149,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Bill__person_id__5070F446">
+  <Association Name="FK__Bill__person_id__5165187F">
     <End Role="Person" Type="Self.Person" Multiplicity="1" />
     <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
     <ReferentialConstraint>
@@ -160,7 +161,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Bill_Prod__bill___5441852A">
+  <Association Name="FK__Bill_Prod__bill___5535A963">
     <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
     <End Role="Bill_Product" Type="Self.Bill_Product" Multiplicity="*" />
     <ReferentialConstraint>
@@ -172,7 +173,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Bill_Prod__produ__534D60F1">
+  <Association Name="FK__Bill_Prod__produ__5441852A">
     <End Role="Product" Type="Self.Product" Multiplicity="1" />
     <End Role="Bill_Product" Type="Self.Bill_Product" Multiplicity="*" />
     <ReferentialConstraint>
@@ -184,7 +185,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Product__categor__38996AB5">
+  <Association Name="FK__Product__categor__3A81B327">
     <End Role="Category" Type="Self.Category" Multiplicity="1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
@@ -220,7 +221,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Shift_wor__perso__4CA06362">
+  <Association Name="FK__Shift_wor__perso__4D94879B">
     <End Role="Account" Type="Self.Account" Multiplicity="1" />
     <End Role="Shift_work" Type="Self.Shift_work" Multiplicity="*" />
     <ReferentialConstraint>
@@ -232,7 +233,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Shift_wor__shift__4D94879B">
+  <Association Name="FK__Shift_wor__shift__4E88ABD4">
     <End Role="Shift_detail" Type="Self.Shift_detail" Multiplicity="1" />
     <End Role="Shift_work" Type="Self.Shift_work" Multiplicity="*" />
     <ReferentialConstraint>
@@ -265,23 +266,23 @@
       <End Role="Role" EntitySet="Role" />
       <End Role="Account" EntitySet="Account" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bill__customer_i__5165187F" Association="Self.FK__Bill__customer_i__5165187F">
+    <AssociationSet Name="FK__Bill__customer_i__52593CB8" Association="Self.FK__Bill__customer_i__52593CB8">
       <End Role="Customer" EntitySet="Customer" />
       <End Role="Bill" EntitySet="Bill" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bill__person_id__5070F446" Association="Self.FK__Bill__person_id__5070F446">
+    <AssociationSet Name="FK__Bill__person_id__5165187F" Association="Self.FK__Bill__person_id__5165187F">
       <End Role="Person" EntitySet="Person" />
       <End Role="Bill" EntitySet="Bill" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bill_Prod__bill___5441852A" Association="Self.FK__Bill_Prod__bill___5441852A">
+    <AssociationSet Name="FK__Bill_Prod__bill___5535A963" Association="Self.FK__Bill_Prod__bill___5535A963">
       <End Role="Bill" EntitySet="Bill" />
       <End Role="Bill_Product" EntitySet="Bill_Product" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bill_Prod__produ__534D60F1" Association="Self.FK__Bill_Prod__produ__534D60F1">
+    <AssociationSet Name="FK__Bill_Prod__produ__5441852A" Association="Self.FK__Bill_Prod__produ__5441852A">
       <End Role="Product" EntitySet="Product" />
       <End Role="Bill_Product" EntitySet="Bill_Product" />
     </AssociationSet>
-    <AssociationSet Name="FK__Product__categor__38996AB5" Association="Self.FK__Product__categor__38996AB5">
+    <AssociationSet Name="FK__Product__categor__3A81B327" Association="Self.FK__Product__categor__3A81B327">
       <End Role="Category" EntitySet="Category" />
       <End Role="Product" EntitySet="Product" />
     </AssociationSet>
@@ -293,11 +294,11 @@
       <End Role="Product" EntitySet="Product" />
       <End Role="Product_Discount" EntitySet="Product_Discount" />
     </AssociationSet>
-    <AssociationSet Name="FK__Shift_wor__perso__4CA06362" Association="Self.FK__Shift_wor__perso__4CA06362">
+    <AssociationSet Name="FK__Shift_wor__perso__4D94879B" Association="Self.FK__Shift_wor__perso__4D94879B">
       <End Role="Account" EntitySet="Account" />
       <End Role="Shift_work" EntitySet="Shift_work" />
     </AssociationSet>
-    <AssociationSet Name="FK__Shift_wor__shift__4D94879B" Association="Self.FK__Shift_wor__shift__4D94879B">
+    <AssociationSet Name="FK__Shift_wor__shift__4E88ABD4" Association="Self.FK__Shift_wor__shift__4E88ABD4">
       <End Role="Shift_detail" EntitySet="Shift_detail" />
       <End Role="Shift_work" EntitySet="Shift_work" />
     </AssociationSet>

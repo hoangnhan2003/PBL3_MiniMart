@@ -28,7 +28,6 @@ H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\Man
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.exe
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.pdb
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.Addproduct.resources
-H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.FormPayment.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.FormActive.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.Form_Alert.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\CustomControl.dll
@@ -52,3 +51,9 @@ H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\Man
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\LiveCharts.Wpf.pdb
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\bin\Debug\LiveCharts.Wpf.xml
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.FormAnalyst.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.FormDiscount.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.FormCustomerView.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.FormAddDiscount.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.Custom.CustomFormInput.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.SelectProductForm.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.FormPayment.resources

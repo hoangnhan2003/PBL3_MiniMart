@@ -33,7 +33,9 @@ namespace ManageMiniMart.DAL
         public virtual DbSet<Discount> Discounts { get; set; }
         public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Product_Discount> Product_Discount { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Shift_detail> Shift_detail { get; set; }
+        public virtual DbSet<Shift_work> Shift_work { get; set; }
     }
 }

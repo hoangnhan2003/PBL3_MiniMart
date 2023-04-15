@@ -127,11 +127,13 @@ namespace ManageMiniMart
         private void btnDiscount_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.color4);
+            OpenChildForm(new FormDiscount());
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.color5);
+            OpenChildForm(new FormCustomerView());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

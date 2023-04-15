@@ -117,20 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>655, 42</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft YaHei, 10.2pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 30</value>
+    <value>128, 45</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 23</value>
@@ -151,7 +175,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="txtProductId.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -184,7 +208,7 @@
     <value>0</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 25</value>
+    <value>276, 40</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 28</value>
@@ -202,7 +226,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 10.2pt, style=Bold</value>
@@ -230,7 +254,7 @@
 </value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 445</value>
+    <value>371, 460</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 45</value>
@@ -251,66 +275,65 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnAdd.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 10.2pt, style=Bold</value>
   </data>
   <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 445</value>
+    <value>135, 460</value>
   </data>
   <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 45</value>
+    <value>114, 45</value>
   </data>
   <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="btnAdd.Text" xml:space="preserve">
-    <value>ADD</value>
+    <value>SAVE</value>
   </data>
   <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
     <value>btnAdd</value>
@@ -322,7 +345,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="cbbDiscount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -331,7 +354,7 @@
     <value>30</value>
   </data>
   <data name="cbbDiscount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 376</value>
+    <value>278, 391</value>
   </data>
   <data name="cbbDiscount.Size" type="System.Drawing.Size, System.Drawing">
     <value>218, 36</value>
@@ -349,7 +372,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;cbbDiscount.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -358,7 +381,7 @@
     <value>Microsoft YaHei, 10.2pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 133</value>
+    <value>121, 148</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 23</value>
@@ -379,7 +402,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -388,7 +411,7 @@
     <value>Microsoft YaHei, 10.2pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 249</value>
+    <value>114, 264</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 23</value>
@@ -409,7 +432,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="cbbCategory.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -418,7 +441,7 @@
     <value>30</value>
   </data>
   <data name="cbbCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 307</value>
+    <value>278, 322</value>
   </data>
   <data name="cbbCategory.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 36</value>
@@ -436,7 +459,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;cbbCategory.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -445,7 +468,7 @@
     <value>Microsoft YaHei, 10.2pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 77</value>
+    <value>121, 92</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 23</value>
@@ -466,7 +489,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="txtQuantity.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -499,7 +522,7 @@
     <value>0</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 244</value>
+    <value>278, 259</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 28</value>
@@ -517,7 +540,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -526,7 +549,7 @@
     <value>Microsoft YaHei, 10.2pt</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 193</value>
+    <value>121, 208</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 23</value>
@@ -547,7 +570,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -556,7 +579,7 @@
     <value>Microsoft YaHei, 10.2pt</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 320</value>
+    <value>114, 335</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 23</value>
@@ -577,7 +600,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -586,7 +609,7 @@
     <value>Microsoft YaHei, 10.2pt</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 389</value>
+    <value>114, 404</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
@@ -607,7 +630,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="txtPrice.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -640,7 +663,7 @@
     <value>0</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 188</value>
+    <value>276, 203</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 28</value>
@@ -658,7 +681,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="txtBrand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -691,7 +714,7 @@
     <value>0</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 128</value>
+    <value>276, 143</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 28</value>
@@ -709,7 +732,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="txtProductName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -742,7 +765,7 @@
     <value>0</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 72</value>
+    <value>276, 87</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 28</value>
@@ -760,7 +783,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -769,7 +792,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 521</value>
+    <value>655, 521</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

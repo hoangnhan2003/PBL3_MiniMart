@@ -18,7 +18,7 @@ namespace ManageMiniMart.DAL
         public Product()
         {
             this.Bill_Product = new HashSet<Bill_Product>();
-            this.Discounts = new HashSet<Discount>();
+            this.Product_Discount = new HashSet<Product_Discount>();
         }
     
         public int product_id { get; set; }
@@ -32,6 +32,6 @@ namespace ManageMiniMart.DAL
         public virtual ICollection<Bill_Product> Bill_Product { get; set; }
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Discount> Discounts { get; set; }
+        public virtual ICollection<Product_Discount> Product_Discount { get; set; }
     }
 }

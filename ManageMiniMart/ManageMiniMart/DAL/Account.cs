@@ -17,7 +17,7 @@ namespace ManageMiniMart.DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Account()
         {
-            this.Shift_detail = new HashSet<Shift_detail>();
+            this.Shift_work = new HashSet<Shift_work>();
         }
     
         public string person_id { get; set; }
@@ -28,6 +28,6 @@ namespace ManageMiniMart.DAL
         public virtual Person Person { get; set; }
         public virtual Role Role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Shift_detail> Shift_detail { get; set; }
+        public virtual ICollection<Shift_work> Shift_work { get; set; }
     }
 }

@@ -106,7 +106,7 @@
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCancel.Location = new System.Drawing.Point(289, 6);
+            this.btnCancel.Location = new System.Drawing.Point(314, 6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(119, 45);
             this.btnCancel.TabIndex = 0;
@@ -119,6 +119,7 @@
             this.btnOK.BorderColor = System.Drawing.Color.BlueViolet;
             this.btnOK.BorderRadius = 9;
             this.btnOK.BorderThickness = 1;
+            this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.btnOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -127,12 +128,13 @@
             this.btnOK.FillColor = System.Drawing.Color.Transparent;
             this.btnOK.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnOK.ForeColor = System.Drawing.Color.Gray;
+            this.btnOK.HoverState.BorderColor = System.Drawing.Color.Red;
             this.btnOK.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnOK.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnOK.Image = ((System.Drawing.Image)(resources.GetObject("btnOK.Image")));
             this.btnOK.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnOK.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnOK.Location = new System.Drawing.Point(289, 6);
+            this.btnOK.Location = new System.Drawing.Point(314, 7);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(93, 45);
             this.btnOK.TabIndex = 0;
