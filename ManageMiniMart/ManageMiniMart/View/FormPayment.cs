@@ -1,4 +1,5 @@
 ﻿using ManageMiniMart.BLL;
+using ManageMiniMart.Custom;
 using ManageMiniMart.DAL;
 using ManageMiniMart.DTO;
 using System;
@@ -14,6 +15,7 @@ using System.Windows.Forms;
 namespace ManageMiniMart.View
 {
     public delegate void SendData(int productId,int amount);
+    public delegate void CustomerDelegate(string name);
     public partial class FormPayment : Form
     {
         private ProductService productService;
@@ -53,8 +55,22 @@ namespace ManageMiniMart.View
         {
             for(int i = 0; i < listProduct.Count; i++)
             {
-               
+                if (listProduct[i].ProductId == product.ProductId)
+                {
+                    listProduct[i] = product;
+                }
             }
+        }
+        private ProductInBill findProductInBillById(int productId)
+        {
+            foreach( var product in listProduct)
+            {
+                if(product.ProductId == productId)
+                {
+                    return product;
+                }
+            }
+            return null;
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {
@@ -88,18 +104,27 @@ namespace ManageMiniMart.View
             {
                 sale += discount.Discount.discount_name;
             }
-            listProduct.Add(new ProductInBill
+            if (checkProduct(productId))
             {
-                ProductId = productId,
-                Name = product.product_name,
-                Brand = product.brand,
-                Price = product.price,
-                Quantity = product.quantity,
-                Amount = amount,
-                Category_name = product.Category.category_name,
-                Sale = sale
+                ProductInBill productInBill = findProductInBillById(productId);
+                productInBill.Amount += amount;
+                updateProduct(productInBill);
+            }
+            else
+            {
+                listProduct.Add(new ProductInBill
+                {
+                    ProductId = productId,
+                    Name = product.product_name,
+                    Brand = product.brand,
+                    Price = product.price,
+                    Quantity = product.quantity,
+                    Amount = amount,
+                    Category_name = product.Category.category_name,
+                    Sale = sale
 
-            });
+                });
+            }
             loadProductInBill();
         }
 
@@ -109,6 +134,30 @@ namespace ManageMiniMart.View
             SelectProductForm selectProductForm = new SelectProductForm(AddProductInBill);
             selectProductForm.loadAllProducts(productName);
             selectProductForm.ShowDialog();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            MyMessageBox myMessage = new MyMessageBox();
+            DialogResult rs = myMessage.show("Are you complete ?", "Confirm", MyMessageBox.TypeMessage.YESNO, MyMessageBox.TypeIcon.INFO);
+            if(rs == DialogResult.Yes)
+            {
+                foreach(var product in listProduct)
+                {
+
+                }
+            }
+        }
+        private void setCustomerId_Input(string customerId)
+        {
+            txtCustomerId.Text = customerId;
+        }
+        private void btnSearchCusomer_CLick(object sender, EventArgs e)
+        {
+            string customerName = txtCustomerId.Text;
+            SelectCustomerForm selectCustomerForm = new SelectCustomerForm(setCustomerId_Input);
+            selectCustomerForm.setCustomer(customerName);
+            selectCustomerForm.Show();
         }
     }
 }

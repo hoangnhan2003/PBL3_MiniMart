@@ -73,6 +73,7 @@
           <ScalarProperty Name="address" ColumnName="address" />
           <ScalarProperty Name="phone_number" ColumnName="phone_number" />
           <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="email" ColumnName="email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

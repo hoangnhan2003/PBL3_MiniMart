@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.WebSockets;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using ManageMiniMart.View;
@@ -215,6 +216,7 @@ namespace ManageMiniMart
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.greenCustom);
+            OpenChildForm(new EmployeeForm());
         }
 
         private void btnAnalyst_Click(object sender, EventArgs e)

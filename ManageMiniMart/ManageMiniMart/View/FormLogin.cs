@@ -1,4 +1,8 @@
-﻿using System;
+﻿using ManageMiniMart;
+using ManageMiniMart.BLL;
+using ManageMiniMart.Custom;
+using ManageMiniMart.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +17,28 @@ namespace Register_Login
 {
     public partial class FormLogin : Form
     {
-        public FormLogin()
+       
+        private bool check;
+        private UserService userService;
+        private EmployeeService employeeService;
+        public FormLogin(bool check = false)
         {
             InitializeComponent();
+            userService = new UserService();
+            this.employeeService = new EmployeeService();
+            this.check = check;
+            if(check)
+            {
+                registerForm();
+            }
         }
-
+        public void setInfoRegister(string employeeId)
+        {
+            Person person = employeeService.GetPersonById(employeeId);
+            txtUserRegister.Text = employeeId;
+            txtEmail.Text = person.email;
+            
+        }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Close();
@@ -36,7 +57,14 @@ namespace Register_Login
             pnl.Location = new Point(338, 5);
             
         }
-
+        
+        private void registerForm()
+        {
+            pnlRegister.Height = pnl.Height;
+            pnlRegister.Location = new Point(0, 3);
+            pnlLogin.Location = new Point(335, 470);
+            pnl.Location = new Point(338, 5);
+        }
         private void label8_Click(object sender, EventArgs e)
         {
             pnlRegister.Height = 5;
@@ -58,6 +86,41 @@ namespace Register_Login
         private void FormLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Register_Click(object sender, EventArgs e)
+        {
+            string personId = txtUserRegister.Text;
+            string password = txtSignUpPassword.Text;
+            string confirm = txtConfirmPassword.Text;
+            // role: 1:Nhân viên; 2:Quản lí
+            int role = 1;
+            if(confirm.Equals(password) && password.Length > 4)
+            {
+                Account account = new Account
+                {
+                    person_id= personId,
+                    password= password,
+                    role_id= role,
+                };
+                userService.SaveAccount(account);
+                MyMessageBox myMessage = new MyMessageBox();
+                myMessage.show("Add account successful");
+            }
+            else if(!confirm.Equals(password)) {
+                //Form_Alert form_Alert = new Form_Alert();
+                //form_Alert.showAlert("Confirm password wrong!", Form_Alert.enmType.error);
+                MyMessageBox myMessage = new MyMessageBox();
+                myMessage.show("Confirm password wrong!");
+
+            }
+            else if(password.Length < 4) {
+                //Form_Alert form_Alert = new Form_Alert();
+                //form_Alert.showAlert("Password should be greater 4 character", Form_Alert.enmType.error);
+                MyMessageBox myMessage = new MyMessageBox();
+                myMessage.show("Password should be greater 4 character");
+
+            }
         }
     }
 }

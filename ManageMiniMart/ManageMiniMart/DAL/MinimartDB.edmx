@@ -73,6 +73,7 @@
           <Property Name="address" Type="nvarchar" MaxLength="200" />
           <Property Name="phone_number" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="salary" Type="float" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -392,6 +393,7 @@
           <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="phone_number" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="salary" Type="Double" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Account" Relationship="Self.FK__Account__person___48CFD27E" FromRole="Person" ToRole="Account" />
           <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__person_id__5165187F" FromRole="Person" ToRole="Bill" />
         </EntityType>
@@ -716,6 +718,7 @@
                 <ScalarProperty Name="address" ColumnName="address" />
                 <ScalarProperty Name="phone_number" ColumnName="phone_number" />
                 <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="email" ColumnName="email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

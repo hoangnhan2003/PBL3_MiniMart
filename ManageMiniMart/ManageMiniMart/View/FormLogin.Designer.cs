@@ -43,24 +43,23 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnLinkRegister = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.pnlRegister = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRegisterPassword = new System.Windows.Forms.Panel();
+            this.txtSignUpPassword = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUserRegister = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,7 +71,7 @@
             this.pnlRegister.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.txtRegisterPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -168,9 +167,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(131)))));
             this.label4.Location = new System.Drawing.Point(-2, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 25);
+            this.label4.Size = new System.Drawing.Size(85, 25);
             this.label4.TabIndex = 7;
-            this.label4.Text = "User Name";
+            this.label4.Text = "User ID";
             // 
             // label5
             // 
@@ -233,24 +232,10 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // btnLinkRegister
-            // 
-            this.btnLinkRegister.AutoSize = true;
-            this.btnLinkRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLinkRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLinkRegister.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnLinkRegister.Location = new System.Drawing.Point(110, 403);
-            this.btnLinkRegister.Name = "btnLinkRegister";
-            this.btnLinkRegister.Size = new System.Drawing.Size(80, 23);
-            this.btnLinkRegister.TabIndex = 14;
-            this.btnLinkRegister.Text = "Sign up";
-            this.btnLinkRegister.Click += new System.EventHandler(this.btnLinkRegister_Click);
-            // 
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.pnlLogin.Controls.Add(this.label3);
-            this.pnlLogin.Controls.Add(this.btnLinkRegister);
             this.pnlLogin.Controls.Add(this.btnLogin);
             this.pnlLogin.Controls.Add(this.label5);
             this.pnlLogin.Controls.Add(this.pnlPassword);
@@ -258,7 +243,7 @@
             this.pnlLogin.Controls.Add(this.pnlUserName);
             this.pnlLogin.Controls.Add(this.label4);
             this.pnlLogin.ForeColor = System.Drawing.Color.Magenta;
-            this.pnlLogin.Location = new System.Drawing.Point(349, 5);
+            this.pnlLogin.Location = new System.Drawing.Point(343, 2);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(324, 440);
             this.pnlLogin.TabIndex = 15;
@@ -273,11 +258,11 @@
             this.pnlRegister.Controls.Add(this.label8);
             this.pnlRegister.Controls.Add(this.button1);
             this.pnlRegister.Controls.Add(this.label9);
-            this.pnlRegister.Controls.Add(this.panel6);
+            this.pnlRegister.Controls.Add(this.txtRegisterPassword);
             this.pnlRegister.Controls.Add(this.pictureBox2);
             this.pnlRegister.Controls.Add(this.panel7);
             this.pnlRegister.Controls.Add(this.label11);
-            this.pnlRegister.Location = new System.Drawing.Point(346, 451);
+            this.pnlRegister.Location = new System.Drawing.Point(343, 454);
             this.pnlRegister.Name = "pnlRegister";
             this.pnlRegister.Size = new System.Drawing.Size(335, 437);
             this.pnlRegister.TabIndex = 15;
@@ -296,46 +281,47 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel9.Controls.Add(this.textBox4);
+            this.panel9.Controls.Add(this.txtConfirmPassword);
             this.panel9.Location = new System.Drawing.Point(4, 275);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.panel9.Size = new System.Drawing.Size(300, 30);
             this.panel9.TabIndex = 26;
             // 
-            // textBox4
+            // txtConfirmPassword
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox4.ForeColor = System.Drawing.Color.DarkViolet;
-            this.textBox4.Location = new System.Drawing.Point(0, 0);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(300, 27);
-            this.textBox4.TabIndex = 0;
+            this.txtConfirmPassword.BackColor = System.Drawing.Color.White;
+            this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConfirmPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtConfirmPassword.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(0, 0);
+            this.txtConfirmPassword.Multiline = true;
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
+            this.txtConfirmPassword.Size = new System.Drawing.Size(300, 27);
+            this.txtConfirmPassword.TabIndex = 0;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel8.Controls.Add(this.textBox3);
+            this.panel8.Controls.Add(this.txtEmail);
             this.panel8.Location = new System.Drawing.Point(9, 167);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.panel8.Size = new System.Drawing.Size(300, 30);
             this.panel8.TabIndex = 24;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox3.ForeColor = System.Drawing.Color.DarkViolet;
-            this.textBox3.Location = new System.Drawing.Point(0, 0);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(300, 27);
-            this.textBox3.TabIndex = 0;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtEmail.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtEmail.Location = new System.Drawing.Point(0, 0);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(300, 27);
+            this.txtEmail.TabIndex = 0;
             // 
             // label12
             // 
@@ -386,6 +372,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // label9
             // 
@@ -398,27 +385,28 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Password";
             // 
-            // panel6
+            // txtRegisterPassword
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Location = new System.Drawing.Point(7, 221);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.panel6.Size = new System.Drawing.Size(300, 30);
-            this.panel6.TabIndex = 18;
+            this.txtRegisterPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtRegisterPassword.Controls.Add(this.txtSignUpPassword);
+            this.txtRegisterPassword.Location = new System.Drawing.Point(7, 221);
+            this.txtRegisterPassword.Name = "txtRegisterPassword";
+            this.txtRegisterPassword.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.txtRegisterPassword.Size = new System.Drawing.Size(300, 30);
+            this.txtRegisterPassword.TabIndex = 18;
             // 
-            // textBox1
+            // txtSignUpPassword
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.ForeColor = System.Drawing.Color.DarkViolet;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 27);
-            this.textBox1.TabIndex = 0;
+            this.txtSignUpPassword.BackColor = System.Drawing.Color.White;
+            this.txtSignUpPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSignUpPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSignUpPassword.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtSignUpPassword.Location = new System.Drawing.Point(0, 0);
+            this.txtSignUpPassword.Multiline = true;
+            this.txtSignUpPassword.Name = "txtSignUpPassword";
+            this.txtSignUpPassword.PasswordChar = '*';
+            this.txtSignUpPassword.Size = new System.Drawing.Size(300, 27);
+            this.txtSignUpPassword.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -435,24 +423,24 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel7.Controls.Add(this.textBox2);
+            this.panel7.Controls.Add(this.txtUserRegister);
             this.panel7.Location = new System.Drawing.Point(7, 103);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.panel7.Size = new System.Drawing.Size(300, 30);
             this.panel7.TabIndex = 16;
             // 
-            // textBox2
+            // txtUserRegister
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.ForeColor = System.Drawing.Color.DarkViolet;
-            this.textBox2.Location = new System.Drawing.Point(0, 0);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 27);
-            this.textBox2.TabIndex = 0;
+            this.txtUserRegister.BackColor = System.Drawing.Color.White;
+            this.txtUserRegister.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserRegister.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtUserRegister.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtUserRegister.Location = new System.Drawing.Point(0, 0);
+            this.txtUserRegister.Multiline = true;
+            this.txtUserRegister.Name = "txtUserRegister";
+            this.txtUserRegister.Size = new System.Drawing.Size(300, 27);
+            this.txtUserRegister.TabIndex = 0;
             // 
             // label11
             // 
@@ -461,15 +449,15 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(131)))));
             this.label11.Location = new System.Drawing.Point(4, 79);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 21);
+            this.label11.Size = new System.Drawing.Size(69, 21);
             this.label11.TabIndex = 17;
-            this.label11.Text = "User Name";
+            this.label11.Text = "User ID";
             // 
             // FormLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(680, 451);
+            this.ClientSize = new System.Drawing.Size(680, 454);
             this.Controls.Add(this.pnlRegister);
             this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.pnl);
@@ -497,8 +485,8 @@
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.txtRegisterPassword.ResumeLayout(false);
+            this.txtRegisterPassword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -521,25 +509,24 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label btnLinkRegister;
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Panel pnlRegister;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel txtRegisterPassword;
+        private System.Windows.Forms.TextBox txtSignUpPassword;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUserRegister;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -46,6 +46,11 @@ namespace ManageMiniMart.BLL
             var bills = db.Bills.Where(b => b.Customer.customer_name.Contains(customerName)).ToList();
             return convertToBillViews(bills);
         }
+        public void addBill(Bill bill)
+        {
+            db.Bills.Add(bill);
+            db.SaveChanges();
+        }
 
     }
 }

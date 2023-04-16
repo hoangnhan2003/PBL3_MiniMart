@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPayment));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,15 +50,26 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtProductId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCustomerId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProduct = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categorynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productInBillBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productInBillBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,9 +101,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(37, 303);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 23);
+            this.label3.Size = new System.Drawing.Size(118, 23);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Product";
+            this.label3.Text = "Product name";
             // 
             // label10
             // 
@@ -184,7 +196,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSearch.Location = new System.Drawing.Point(478, 280);
+            this.btnSearch.Location = new System.Drawing.Point(482, 285);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(106, 48);
             this.btnSearch.TabIndex = 9;
@@ -222,6 +234,7 @@
             this.btnPrint.Size = new System.Drawing.Size(108, 48);
             this.btnPrint.TabIndex = 10;
             this.btnPrint.Text = "Print bill";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // panel1
             // 
@@ -258,9 +271,10 @@
             // 
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.txtProductId);
-            this.panel3.Controls.Add(this.txtCustomerName);
+            this.panel3.Controls.Add(this.txtCustomerId);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.guna2Panel1);
+            this.panel3.Controls.Add(this.btnFind);
             this.panel3.Controls.Add(this.btnSearch);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label5);
@@ -306,29 +320,50 @@
             this.txtProductId.Size = new System.Drawing.Size(225, 38);
             this.txtProductId.TabIndex = 10;
             // 
-            // txtCustomerName
+            // txtCustomerId
             // 
-            this.txtCustomerName.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.txtCustomerName.BorderRadius = 10;
-            this.txtCustomerName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCustomerName.DefaultText = "";
-            this.txtCustomerName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCustomerName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCustomerName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCustomerName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCustomerName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtCustomerName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCustomerName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.ForeColor = System.Drawing.Color.White;
-            this.txtCustomerName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCustomerName.Location = new System.Drawing.Point(228, 230);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.PasswordChar = '\0';
-            this.txtCustomerName.PlaceholderText = "";
-            this.txtCustomerName.SelectedText = "";
-            this.txtCustomerName.Size = new System.Drawing.Size(225, 38);
-            this.txtCustomerName.TabIndex = 10;
+            this.txtCustomerId.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.txtCustomerId.BorderRadius = 10;
+            this.txtCustomerId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCustomerId.DefaultText = "";
+            this.txtCustomerId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCustomerId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCustomerId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCustomerId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCustomerId.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtCustomerId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCustomerId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerId.ForeColor = System.Drawing.Color.White;
+            this.txtCustomerId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCustomerId.Location = new System.Drawing.Point(228, 230);
+            this.txtCustomerId.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.PasswordChar = '\0';
+            this.txtCustomerId.PlaceholderText = "";
+            this.txtCustomerId.SelectedText = "";
+            this.txtCustomerId.Size = new System.Drawing.Size(225, 38);
+            this.txtCustomerId.TabIndex = 10;
+            // 
+            // btnFind
+            // 
+            this.btnFind.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnFind.BorderRadius = 9;
+            this.btnFind.BorderThickness = 1;
+            this.btnFind.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFind.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFind.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFind.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFind.FillColor = System.Drawing.Color.Empty;
+            this.btnFind.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.Color.White;
+            this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
+            this.btnFind.ImageSize = new System.Drawing.Size(50, 50);
+            this.btnFind.Location = new System.Drawing.Point(482, 228);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(106, 48);
+            this.btnFind.TabIndex = 9;
+            this.btnFind.Text = "Find";
+            this.btnFind.Click += new System.EventHandler(this.btnSearchCusomer_CLick);
             // 
             // panel2
             // 
@@ -346,6 +381,7 @@
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
             this.dgvProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProduct.AutoGenerateColumns = false;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -357,7 +393,17 @@
             this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProduct.ColumnHeadersHeight = 50;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productIdDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.categorynameDataGridViewTextBoxColumn,
+            this.saleDataGridViewTextBoxColumn,
+            this.brandDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn});
             this.dgvProduct.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgvProduct.DataSource = this.productInBillBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -400,6 +446,66 @@
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // productIdDataGridViewTextBoxColumn
+            // 
+            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
+            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
+            this.productIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // categorynameDataGridViewTextBoxColumn
+            // 
+            this.categorynameDataGridViewTextBoxColumn.DataPropertyName = "Category_name";
+            this.categorynameDataGridViewTextBoxColumn.HeaderText = "Category_name";
+            this.categorynameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categorynameDataGridViewTextBoxColumn.Name = "categorynameDataGridViewTextBoxColumn";
+            // 
+            // saleDataGridViewTextBoxColumn
+            // 
+            this.saleDataGridViewTextBoxColumn.DataPropertyName = "Sale";
+            this.saleDataGridViewTextBoxColumn.HeaderText = "Sale";
+            this.saleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.saleDataGridViewTextBoxColumn.Name = "saleDataGridViewTextBoxColumn";
+            // 
+            // brandDataGridViewTextBoxColumn
+            // 
+            this.brandDataGridViewTextBoxColumn.DataPropertyName = "Brand";
+            this.brandDataGridViewTextBoxColumn.HeaderText = "Brand";
+            this.brandDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.brandDataGridViewTextBoxColumn.Name = "brandDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // productInBillBindingSource
+            // 
+            this.productInBillBindingSource.DataSource = typeof(ManageMiniMart.DTO.ProductInBill);
+            // 
             // FormPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -421,6 +527,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productInBillBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -443,8 +550,18 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvProduct;
-        private Guna.UI2.WinForms.Guna2TextBox txtCustomerName;
+        private Guna.UI2.WinForms.Guna2TextBox txtCustomerId;
         private Guna.UI2.WinForms.Guna2TextBox txtProductId;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categorynameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource productInBillBindingSource;
+        private Guna.UI2.WinForms.Guna2Button btnFind;
     }
 }

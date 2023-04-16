@@ -68,6 +68,7 @@
     <Property Name="address" Type="nvarchar" MaxLength="200" />
     <Property Name="phone_number" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="salary" Type="float" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="Product">
     <Key>

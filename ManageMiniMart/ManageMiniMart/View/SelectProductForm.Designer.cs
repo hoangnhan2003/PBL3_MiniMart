@@ -40,7 +40,7 @@
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.productDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +48,7 @@
             this.categorynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ADD = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.productDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -57,6 +57,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(95)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.btnMaximun);
@@ -213,9 +214,18 @@
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
-            // productDTOBindingSource
+            // ADD
             // 
-            this.productDTOBindingSource.DataSource = typeof(ManageMiniMart.DTO.ProductDTO);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ADD.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ADD.HeaderText = "Action";
+            this.ADD.MinimumWidth = 6;
+            this.ADD.Name = "ADD";
+            this.ADD.Text = "ADD";
+            this.ADD.UseColumnTextForButtonValue = true;
             // 
             // productId
             // 
@@ -266,18 +276,9 @@
             this.brandDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.brandDataGridViewTextBoxColumn.Name = "brandDataGridViewTextBoxColumn";
             // 
-            // ADD
+            // productDTOBindingSource
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ADD.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ADD.HeaderText = "Action";
-            this.ADD.MinimumWidth = 6;
-            this.ADD.Name = "ADD";
-            this.ADD.Text = "ADD";
-            this.ADD.UseColumnTextForButtonValue = true;
+            this.productDTOBindingSource.DataSource = typeof(ManageMiniMart.DTO.ProductDTO);
             // 
             // SelectProductForm
             // 

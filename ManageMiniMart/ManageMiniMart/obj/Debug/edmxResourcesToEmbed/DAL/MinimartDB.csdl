@@ -79,6 +79,7 @@
     <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="phone_number" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="salary" Type="Double" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Account" Relationship="Self.FK__Account__person___48CFD27E" FromRole="Person" ToRole="Account" />
     <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__person_id__5165187F" FromRole="Person" ToRole="Bill" />
   </EntityType>
