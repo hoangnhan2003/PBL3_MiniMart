@@ -131,6 +131,10 @@ namespace ManageMiniMart.BLL
             Product product = db.Products.Where(p => p.product_id == id).FirstOrDefault();
             return product;
         }
-        
+        public Product findByName(string name,string brand,double price)
+        {
+            return db.Products.Where(p => p.product_name.Equals(name) && p.brand.Equals(brand) && p.price == price).FirstOrDefault();
+        }
+         
     }
 }

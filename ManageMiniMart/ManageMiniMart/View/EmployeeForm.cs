@@ -50,8 +50,18 @@ namespace ManageMiniMart.View
             {
                 FormLogin formLogin = new FormLogin(true);
                 formLogin.setInfoRegister(personId);
+                formLogin.ShowDialog();
                
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string personId = dgvEmloyee.SelectedRows[0].Cells[0].Value.ToString();
+            AddEmployeeForm employeeForm = new AddEmployeeForm();
+            employeeForm.setEmployee(personId); 
+            employeeForm.ShowDialog();
+            loadAllEmployee();
         }
     }
 }

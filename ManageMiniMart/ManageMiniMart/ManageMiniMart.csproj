@@ -180,6 +180,12 @@
     <Compile Include="View\AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DashboardEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DashboardEmployee.Designer.cs">
+      <DependentUpon>DashboardEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,12 @@
     <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormProductForEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormProductForEmployee.Designer.cs">
+      <DependentUpon>FormProductForEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +293,9 @@
     <EmbeddedResource Include="View\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DashboardEmployee.resx">
+      <DependentUpon>DashboardEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormProductForEmployee.resx">
+      <DependentUpon>FormProductForEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
@@ -341,6 +359,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ManageMiniMart.DAL.Person.datasource" />
+    <None Include="Properties\DataSources\ManageMiniMart.DTO.BillView.datasource" />
     <None Include="Properties\DataSources\ManageMiniMart.DTO.CustomerView.datasource" />
     <None Include="Properties\DataSources\ManageMiniMart.DTO.ProductDTO.datasource" />
     <None Include="Properties\DataSources\ManageMiniMart.DTO.ProductInBill.datasource" />
@@ -377,6 +396,10 @@
       <DependentUpon>MinimartDB.edmx</DependentUpon>
       <LastGenOutput>MinimartDB.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\EmployeeView\" />
+    <Folder Include="View\ManagerView\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

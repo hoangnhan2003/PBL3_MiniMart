@@ -128,5 +128,13 @@ namespace ManageMiniMart.Custom
         {
             Close();
         }
+
+        private void txtInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                this.btnOK_Click(sender, e);
+            }
+        }
     }
 }

@@ -38,8 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblEmployeeName = new System.Windows.Forms.Label();
+            this.lblEmployeeID = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.cbbPayment = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
@@ -59,10 +59,12 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categorynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productInBillBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productInBillBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,6 +72,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productInBillBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productInBillBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,7 +113,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label10.Location = new System.Drawing.Point(13, 66);
+            this.label10.Location = new System.Drawing.Point(4, 66);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 22);
             this.label10.TabIndex = 0;
@@ -127,27 +130,28 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "ID:";
             // 
-            // label8
+            // lblEmployeeName
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label8.Location = new System.Drawing.Point(77, 66);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(141, 22);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Nguyen Thi Hoa";
+            this.lblEmployeeName.AutoSize = true;
+            this.lblEmployeeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeName.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblEmployeeName.Location = new System.Drawing.Point(66, 66);
+            this.lblEmployeeName.Name = "lblEmployeeName";
+            this.lblEmployeeName.Size = new System.Drawing.Size(149, 22);
+            this.lblEmployeeName.TabIndex = 0;
+            this.lblEmployeeName.Text = "Ngô Hoàng Nhận";
+            this.lblEmployeeName.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label7
+            // lblEmployeeID
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label7.Location = new System.Drawing.Point(71, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 22);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "1922442456";
+            this.lblEmployeeID.AutoSize = true;
+            this.lblEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeID.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblEmployeeID.Location = new System.Drawing.Point(71, 17);
+            this.lblEmployeeID.Name = "lblEmployeeID";
+            this.lblEmployeeID.Size = new System.Drawing.Size(110, 22);
+            this.lblEmployeeID.TabIndex = 0;
+            this.lblEmployeeID.Text = "1922442456";
             // 
             // guna2Panel1
             // 
@@ -155,13 +159,13 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderRadius = 15;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.label8);
+            this.guna2Panel1.Controls.Add(this.lblEmployeeName);
             this.guna2Panel1.Controls.Add(this.label10);
             this.guna2Panel1.Controls.Add(this.label9);
-            this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Location = new System.Drawing.Point(662, 12);
+            this.guna2Panel1.Controls.Add(this.lblEmployeeID);
+            this.guna2Panel1.Location = new System.Drawing.Point(622, 12);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(227, 115);
+            this.guna2Panel1.Size = new System.Drawing.Size(267, 115);
             this.guna2Panel1.TabIndex = 6;
             // 
             // cbbPayment
@@ -399,6 +403,7 @@
             this.priceDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn,
             this.categorynameDataGridViewTextBoxColumn,
+            this.DiscountId,
             this.saleDataGridViewTextBoxColumn,
             this.brandDataGridViewTextBoxColumn,
             this.amountDataGridViewTextBoxColumn});
@@ -481,6 +486,13 @@
             this.categorynameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categorynameDataGridViewTextBoxColumn.Name = "categorynameDataGridViewTextBoxColumn";
             // 
+            // DiscountId
+            // 
+            this.DiscountId.DataPropertyName = "DiscountId";
+            this.DiscountId.HeaderText = "DiscountId";
+            this.DiscountId.MinimumWidth = 6;
+            this.DiscountId.Name = "DiscountId";
+            // 
             // saleDataGridViewTextBoxColumn
             // 
             this.saleDataGridViewTextBoxColumn.DataPropertyName = "Sale";
@@ -506,10 +518,13 @@
             // 
             this.productInBillBindingSource.DataSource = typeof(ManageMiniMart.DTO.ProductInBill);
             // 
+            // productInBillBindingSource1
+            // 
+            this.productInBillBindingSource1.DataSource = typeof(ManageMiniMart.DTO.ProductInBill);
+            // 
             // FormPayment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(901, 729);
             this.Controls.Add(this.panel2);
@@ -528,6 +543,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productInBillBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productInBillBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -538,8 +554,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblEmployeeName;
+        private System.Windows.Forms.Label lblEmployeeID;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ComboBox cbbPayment;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
@@ -553,15 +569,17 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCustomerId;
         private Guna.UI2.WinForms.Guna2TextBox txtProductId;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource productInBillBindingSource;
+        private Guna.UI2.WinForms.Guna2Button btnFind;
+        private System.Windows.Forms.BindingSource productInBillBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categorynameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiscountId;
         private System.Windows.Forms.DataGridViewTextBoxColumn saleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource productInBillBindingSource;
-        private Guna.UI2.WinForms.Guna2Button btnFind;
     }
 }

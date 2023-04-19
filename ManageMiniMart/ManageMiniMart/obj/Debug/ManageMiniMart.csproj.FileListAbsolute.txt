@@ -60,3 +60,5 @@ H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\Man
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.EmployeeForm.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.SelectCustomerForm.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.AddEmployeeForm.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.DashboardEmployee.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.FormProductForEmployee.resources

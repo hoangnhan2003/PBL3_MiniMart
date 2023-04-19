@@ -36,12 +36,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlUserName = new System.Windows.Forms.Panel();
-            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtUserId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlPassword = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.pnlRegister = new System.Windows.Forms.Panel();
@@ -61,6 +60,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtUserRegister = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -95,7 +95,7 @@
             this.pnl.Location = new System.Drawing.Point(5, 5);
             this.pnl.Margin = new System.Windows.Forms.Padding(0);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(330, 440);
+            this.pnl.Size = new System.Drawing.Size(333, 440);
             this.pnl.TabIndex = 1;
             this.pnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_MouseDown);
             // 
@@ -140,7 +140,7 @@
             // pnlUserName
             // 
             this.pnlUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.pnlUserName.Controls.Add(this.txtUserName);
+            this.pnlUserName.Controls.Add(this.txtUserId);
             this.pnlUserName.ForeColor = System.Drawing.Color.Magenta;
             this.pnlUserName.Location = new System.Drawing.Point(3, 139);
             this.pnlUserName.Name = "pnlUserName";
@@ -148,17 +148,17 @@
             this.pnlUserName.Size = new System.Drawing.Size(300, 30);
             this.pnlUserName.TabIndex = 6;
             // 
-            // txtUserName
+            // txtUserId
             // 
-            this.txtUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtUserName.ForeColor = System.Drawing.Color.DarkViolet;
-            this.txtUserName.Location = new System.Drawing.Point(0, 0);
-            this.txtUserName.Multiline = true;
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(300, 27);
-            this.txtUserName.TabIndex = 0;
+            this.txtUserId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.txtUserId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtUserId.ForeColor = System.Drawing.Color.DarkViolet;
+            this.txtUserId.Location = new System.Drawing.Point(0, 0);
+            this.txtUserId.Multiline = true;
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.Size = new System.Drawing.Size(300, 27);
+            this.txtUserId.TabIndex = 0;
             // 
             // label4
             // 
@@ -204,21 +204,8 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(300, 27);
             this.txtPassword.TabIndex = 0;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(131)))));
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(10, 309);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(291, 35);
-            this.btnLogin.TabIndex = 10;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
+            this.txtPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseDown);
             // 
             // pictureBox3
             // 
@@ -234,9 +221,10 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.pnlLogin.Controls.Add(this.guna2Button1);
             this.pnlLogin.Controls.Add(this.label3);
-            this.pnlLogin.Controls.Add(this.btnLogin);
             this.pnlLogin.Controls.Add(this.label5);
             this.pnlLogin.Controls.Add(this.pnlPassword);
             this.pnlLogin.Controls.Add(this.pictureBox3);
@@ -245,7 +233,7 @@
             this.pnlLogin.ForeColor = System.Drawing.Color.Magenta;
             this.pnlLogin.Location = new System.Drawing.Point(343, 2);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(324, 440);
+            this.pnlLogin.Size = new System.Drawing.Size(335, 449);
             this.pnlLogin.TabIndex = 15;
             // 
             // pnlRegister
@@ -453,11 +441,30 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "User ID";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(131)))));
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(131)))));
+            this.guna2Button1.Location = new System.Drawing.Point(14, 326);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(285, 37);
+            this.guna2Button1.TabIndex = 13;
+            this.guna2Button1.Text = "Login";
+            this.guna2Button1.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(680, 454);
+            this.ClientSize = new System.Drawing.Size(682, 451);
             this.Controls.Add(this.pnlRegister);
             this.Controls.Add(this.pnlLogin);
             this.Controls.Add(this.pnl);
@@ -502,12 +509,11 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnlUserName;
-        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtUserId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnlPassword;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Panel pnlRegister;
@@ -528,6 +534,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
 

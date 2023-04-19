@@ -20,5 +20,9 @@ namespace ManageMiniMart.BLL
             db.Bill_Product.AddOrUpdate(entity);
             db.SaveChanges();
         }
+        public List<Bill_Product> GetBill_ProductByBillId(int billId)
+        {
+            return db.Bill_Product.Where(bill => bill.bill_id== billId).ToList();
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace ManageMiniMart.DTO
         private int _quantity;
         private string _brand;
         private string _category_name;
+        private int _discountId;
         private string _sale;
         private int _amount;
         public int ProductId { get => _productId; set => _productId = value; }
@@ -24,5 +25,6 @@ namespace ManageMiniMart.DTO
         public string Sale { get => _sale; set => _sale = value; }
         public string Brand { get => _brand; set => _brand = value; }
         public int Amount { get => _amount; set => _amount = value; }
+        public int DiscountId { get => _discountId; set => _discountId = value; }
     }
 }

@@ -321,9 +321,9 @@
             // 
             // Addproduct
             // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnMaximun);
             this.Controls.Add(this.btnExit);

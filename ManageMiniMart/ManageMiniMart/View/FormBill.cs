@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageMiniMart.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,40 +13,32 @@ namespace ManageMiniMart
 {
     public partial class FormBill : Form
     {
+        private BillService billService;
         public FormBill()
         {
             InitializeComponent();
+            billService= new BillService();
+            loadAllBill();
         }
-
+        public void loadAllBill()
+        {
+            dgvBill.DataSource = null;
+            dgvBill.DataSource = billService.GetAllBillView();
+        }
         private void rjButton4_Click(object sender, EventArgs e)
         {
-            DataTable db = new DataTable();
-            db.Columns.AddRange(new DataColumn[]
-            {
-                new DataColumn("InvoiceCode",typeof(string)),
-                new DataColumn("CustomerCode",typeof(string)),
-                new DataColumn("CashierCode",typeof(string)),
-                new DataColumn("CreatedDate",typeof(string)),
-                
-            });
-            db.Rows.Add(new object[] {
-                "InvoiceCode1","012431421","032512123",DateTime.Now.ToString()
-            });
-            db.Rows.Add(new object[] {
-                "InvoiceCode2","012431421","032512123",DateTime.Now.ToString()
-            });
-            db.Rows.Add(new object[] {
-                "InvoiceCode3","012431421","032512123",DateTime.Now.ToString()
-            });
-            db.Rows.Add(new object[] {
-                "InvoiceCode4","012431421","032512123",DateTime.Now.ToString()
-            });
-            dgvBill.DataSource = db;
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string customerName = txtSearch.Text;
+            dgvBill.DataSource = billService.getAllBillViewByCustomerName(customerName);
         }
     }
 }

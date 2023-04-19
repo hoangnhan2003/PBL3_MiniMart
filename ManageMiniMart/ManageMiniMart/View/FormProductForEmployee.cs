@@ -9,39 +9,38 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Forms;
 
-namespace ManageMiniMart
+namespace ManageMiniMart.View
 {
     public delegate void ReloadFormProduct();
-    public partial class FormProduct : Form
+    public partial class FormProductForEmployee : Form
     {
         private ProductDiscountService productDiscountService;
         private Form currentChildForm;
         private ProductService productService;
         private CategoryService categoryService;
-        public FormProduct()
+        public FormProductForEmployee()
         {
             InitializeComponent();
             productService = new ProductService();
-            categoryService= new CategoryService();
+            categoryService = new CategoryService();
             cbbCategory.DataSource = categoryService.getAllCatogory();
             loadAllProduct();
             productDiscountService = new ProductDiscountService();
         }
-        public void OpenChildForm(Form form) { 
-            if(currentChildForm != null)
+        public void OpenChildForm(Form form)
+        {
+            if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
-            currentChildForm= form;
-            form.FormBorderStyle= FormBorderStyle.None;
+            currentChildForm = form;
+            form.FormBorderStyle = FormBorderStyle.None;
             form.TopLevel = false;
             panelChildFormProduct.Controls.Add(form);
-            panelChildFormProduct.Tag= form;
+            panelChildFormProduct.Tag = form;
             form.BringToFront();
             form.Show();
         }
@@ -58,29 +57,29 @@ namespace ManageMiniMart
         {
             int cateId = ((CBBItem)cbbCategory.SelectedItem).Value;
             string productName = txtProductName.Text;
-            if(cateId > 0 )
+            if (cateId > 0)
             {
-                dgvProduct.DataSource = productService.findByProductNameAndCategory(cateId,productName);
+                dgvProduct.DataSource = productService.findByProductNameAndCategory(cateId, productName);
             }
             else
             {
                 dgvProduct.DataSource = productService.findByName(productName);
             }
-            
+
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
             int cID = ((CBBItem)cbbCategory.SelectedItem).Value;
-            if(cID == 0)
+            if (cID == 0)
             {
                 dgvProduct.DataSource = productService.findByName(txtProductName.Text);
             }
             else
             {
-                dgvProduct.DataSource = productService.findByProductNameAndCategory(cID,txtProductName.Text);
+                dgvProduct.DataSource = productService.findByProductNameAndCategory(cID, txtProductName.Text);
             }
-            
+
         }
         private void loadAllProduct()
         {
@@ -111,11 +110,11 @@ namespace ManageMiniMart
                 i++;
             }
             MyMessageBox messageBox = new MyMessageBox();
-            DialogResult rs = messageBox.show("Are you sure delete " + strings, "Confirm delete", MyMessageBox.TypeMessage.YESNO,MyMessageBox.TypeIcon.QUESTION);
+            DialogResult rs = messageBox.show("Are you sure delete " + strings, "Confirm delete", MyMessageBox.TypeMessage.YESNO, MyMessageBox.TypeIcon.QUESTION);
 
-            if(rs == DialogResult.Yes)
+            if (rs == DialogResult.Yes)
             {
-                
+
                 foreach (int id in productId)
                 {
                     productService.deleteProduct(id);

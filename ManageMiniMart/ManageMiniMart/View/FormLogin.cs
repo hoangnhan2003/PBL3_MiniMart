@@ -2,6 +2,7 @@
 using ManageMiniMart.BLL;
 using ManageMiniMart.Custom;
 using ManageMiniMart.DAL;
+using ManageMiniMart.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -120,6 +121,41 @@ namespace Register_Login
                 MyMessageBox myMessage = new MyMessageBox();
                 myMessage.show("Password should be greater 4 character");
 
+            }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string userId = txtUserId.Text;
+            string password = txtPassword.Text;
+            Account account = userService.checkUser(userId, password);
+            if(account != null)
+            {
+                if(account.role_id == 1)
+                {
+                    DashboardEmployee employee = new DashboardEmployee(account);
+                    employee.Show();
+                }
+                else
+                {
+                    Dashboard dashboard = new Dashboard(account);
+                    dashboard.Show();
+                    
+                }
+            }
+            
+        }
+
+        private void txtPassword_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter )
+            {
+                btnLogin_Click(sender, e);
             }
         }
     }

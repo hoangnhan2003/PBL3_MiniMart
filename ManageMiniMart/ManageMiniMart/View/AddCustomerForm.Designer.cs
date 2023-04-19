@@ -105,7 +105,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(164, 195);
+            this.label1.Location = new System.Drawing.Point(143, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 23);
             this.label1.TabIndex = 11;
@@ -118,7 +118,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(157, 313);
+            this.label3.Location = new System.Drawing.Point(143, 313);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 23);
             this.label3.TabIndex = 17;
@@ -132,7 +132,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(164, 139);
+            this.label2.Location = new System.Drawing.Point(143, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 23);
             this.label2.TabIndex = 12;
@@ -142,9 +142,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel4.Controls.Add(this.txtAddress);
-            this.panel4.Location = new System.Drawing.Point(321, 311);
+            this.panel4.Location = new System.Drawing.Point(300, 311);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(199, 28);
+            this.panel4.Size = new System.Drawing.Size(307, 28);
             this.panel4.TabIndex = 16;
             // 
             // txtAddress
@@ -157,7 +157,7 @@
             this.txtAddress.Location = new System.Drawing.Point(0, 0);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(199, 25);
+            this.txtAddress.Size = new System.Drawing.Size(307, 25);
             this.txtAddress.TabIndex = 0;
             // 
             // label5
@@ -167,7 +167,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(164, 255);
+            this.label5.Location = new System.Drawing.Point(143, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 23);
             this.label5.TabIndex = 13;
@@ -180,7 +180,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(157, 382);
+            this.label6.Location = new System.Drawing.Point(143, 382);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 23);
             this.label6.TabIndex = 14;
@@ -190,9 +190,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel3.Controls.Add(this.txtCustomerName);
-            this.panel3.Location = new System.Drawing.Point(319, 190);
+            this.panel3.Location = new System.Drawing.Point(298, 190);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(199, 28);
+            this.panel3.Size = new System.Drawing.Size(306, 28);
             this.panel3.TabIndex = 9;
             // 
             // txtCustomerName
@@ -205,16 +205,16 @@
             this.txtCustomerName.Location = new System.Drawing.Point(0, 0);
             this.txtCustomerName.Multiline = true;
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(199, 25);
+            this.txtCustomerName.Size = new System.Drawing.Size(306, 25);
             this.txtCustomerName.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel2.Controls.Add(this.txtCustomerId);
-            this.panel2.Location = new System.Drawing.Point(319, 134);
+            this.panel2.Location = new System.Drawing.Point(298, 134);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(199, 28);
+            this.panel2.Size = new System.Drawing.Size(306, 28);
             this.panel2.TabIndex = 10;
             // 
             // txtCustomerId
@@ -227,7 +227,7 @@
             this.txtCustomerId.Location = new System.Drawing.Point(0, 0);
             this.txtCustomerId.Multiline = true;
             this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.Size = new System.Drawing.Size(199, 25);
+            this.txtCustomerId.Size = new System.Drawing.Size(306, 25);
             this.txtCustomerId.TabIndex = 0;
             // 
             // dtpBirthdate
@@ -237,11 +237,11 @@
             this.dtpBirthdate.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.dtpBirthdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpBirthdate.Location = new System.Drawing.Point(318, 255);
+            this.dtpBirthdate.Location = new System.Drawing.Point(297, 255);
             this.dtpBirthdate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpBirthdate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthdate.Name = "dtpBirthdate";
-            this.dtpBirthdate.Size = new System.Drawing.Size(202, 36);
+            this.dtpBirthdate.Size = new System.Drawing.Size(262, 36);
             this.dtpBirthdate.TabIndex = 0;
             this.dtpBirthdate.Value = new System.DateTime(2023, 4, 8, 22, 56, 26, 751);
             // 
@@ -249,9 +249,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Location = new System.Drawing.Point(318, 377);
+            this.panel1.Location = new System.Drawing.Point(297, 377);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 28);
+            this.panel1.Size = new System.Drawing.Size(307, 28);
             this.panel1.TabIndex = 25;
             // 
             // txtEmail
@@ -264,7 +264,7 @@
             this.txtEmail.Location = new System.Drawing.Point(0, 0);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(199, 25);
+            this.txtEmail.Size = new System.Drawing.Size(307, 25);
             this.txtEmail.TabIndex = 0;
             // 
             // btnMinimize
@@ -321,6 +321,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(90)))));
             this.panel5.Controls.Add(this.btnMinimize);
             this.panel5.Controls.Add(this.btnExit);
             this.panel5.Controls.Add(this.btnMaximun);
@@ -333,8 +334,7 @@
             // 
             // AddCustomerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(807, 617);
             this.Controls.Add(this.panel5);
