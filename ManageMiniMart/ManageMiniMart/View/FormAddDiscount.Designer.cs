@@ -34,6 +34,8 @@
             this.btnMaximun = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpEndTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpStartTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtProductId = new System.Windows.Forms.TextBox();
@@ -47,13 +49,15 @@
             this.txtSale = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtDiscountName = new System.Windows.Forms.TextBox();
-            this.dtpStartTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtpEndTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtDiscountId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,6 +126,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dtpEndTime);
             this.panel2.Controls.Add(this.dtpStartTime);
             this.panel2.Controls.Add(this.label4);
@@ -139,6 +145,42 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(568, 468);
             this.panel2.TabIndex = 1;
+            // 
+            // dtpEndTime
+            // 
+            this.dtpEndTime.BackColor = System.Drawing.Color.Transparent;
+            this.dtpEndTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dtpEndTime.BorderRadius = 15;
+            this.dtpEndTime.Checked = true;
+            this.dtpEndTime.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.dtpEndTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEndTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEndTime.Location = new System.Drawing.Point(257, 214);
+            this.dtpEndTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpEndTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpEndTime.Name = "dtpEndTime";
+            this.dtpEndTime.Size = new System.Drawing.Size(212, 36);
+            this.dtpEndTime.TabIndex = 26;
+            this.dtpEndTime.Value = new System.DateTime(2023, 4, 13, 23, 6, 11, 212);
+            // 
+            // dtpStartTime
+            // 
+            this.dtpStartTime.BackColor = System.Drawing.Color.Transparent;
+            this.dtpStartTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dtpStartTime.BorderRadius = 15;
+            this.dtpStartTime.Checked = true;
+            this.dtpStartTime.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.dtpStartTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStartTime.Location = new System.Drawing.Point(257, 158);
+            this.dtpStartTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpStartTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpStartTime.Name = "dtpStartTime";
+            this.dtpStartTime.Size = new System.Drawing.Size(212, 36);
+            this.dtpStartTime.TabIndex = 26;
+            this.dtpStartTime.Value = new System.DateTime(2023, 4, 13, 23, 15, 27, 420);
             // 
             // label4
             // 
@@ -189,7 +231,7 @@
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCancel.Location = new System.Drawing.Point(344, 309);
+            this.btnCancel.Location = new System.Drawing.Point(344, 377);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(131, 45);
             this.btnCancel.TabIndex = 22;
@@ -210,7 +252,7 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAdd.Location = new System.Drawing.Point(108, 309);
+            this.btnAdd.Location = new System.Drawing.Point(108, 377);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(131, 45);
             this.btnAdd.TabIndex = 23;
@@ -224,7 +266,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(105, 157);
+            this.label3.Location = new System.Drawing.Point(105, 225);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 23);
             this.label3.TabIndex = 19;
@@ -237,7 +279,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(105, 38);
+            this.label2.Location = new System.Drawing.Point(105, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 23);
             this.label2.TabIndex = 14;
@@ -250,7 +292,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(105, 100);
+            this.label5.Location = new System.Drawing.Point(105, 168);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 23);
             this.label5.TabIndex = 15;
@@ -263,7 +305,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(111, 213);
+            this.label6.Location = new System.Drawing.Point(111, 281);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 23);
             this.label6.TabIndex = 16;
@@ -273,7 +315,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel6.Controls.Add(this.txtSale);
-            this.panel6.Location = new System.Drawing.Point(260, 208);
+            this.panel6.Location = new System.Drawing.Point(260, 276);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(199, 28);
             this.panel6.TabIndex = 10;
@@ -295,7 +337,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel7.Controls.Add(this.txtDiscountName);
-            this.panel7.Location = new System.Drawing.Point(260, 33);
+            this.panel7.Location = new System.Drawing.Point(260, 101);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(199, 28);
             this.panel7.TabIndex = 12;
@@ -313,43 +355,43 @@
             this.txtDiscountName.Size = new System.Drawing.Size(199, 25);
             this.txtDiscountName.TabIndex = 0;
             // 
-            // dtpStartTime
+            // label1
             // 
-            this.dtpStartTime.BackColor = System.Drawing.Color.Transparent;
-            this.dtpStartTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dtpStartTime.BorderRadius = 15;
-            this.dtpStartTime.Checked = true;
-            this.dtpStartTime.FillColor = System.Drawing.Color.MediumTurquoise;
-            this.dtpStartTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStartTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStartTime.Location = new System.Drawing.Point(257, 90);
-            this.dtpStartTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpStartTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpStartTime.Name = "dtpStartTime";
-            this.dtpStartTime.Size = new System.Drawing.Size(212, 36);
-            this.dtpStartTime.TabIndex = 26;
-            this.dtpStartTime.Value = new System.DateTime(2023, 4, 13, 23, 15, 27, 420);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(106, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 23);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "DiscountId";
             // 
-            // dtpEndTime
+            // panel3
             // 
-            this.dtpEndTime.BackColor = System.Drawing.Color.Transparent;
-            this.dtpEndTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dtpEndTime.BorderRadius = 15;
-            this.dtpEndTime.Checked = true;
-            this.dtpEndTime.FillColor = System.Drawing.Color.MediumTurquoise;
-            this.dtpEndTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEndTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEndTime.Location = new System.Drawing.Point(257, 146);
-            this.dtpEndTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpEndTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpEndTime.Name = "dtpEndTime";
-            this.dtpEndTime.Size = new System.Drawing.Size(212, 36);
-            this.dtpEndTime.TabIndex = 26;
-            this.dtpEndTime.Value = new System.DateTime(2023, 4, 13, 23, 6, 11, 212);
+            this.panel3.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.panel3.Controls.Add(this.txtDiscountId);
+            this.panel3.Location = new System.Drawing.Point(261, 56);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(199, 28);
+            this.panel3.TabIndex = 27;
             // 
-            // AddDiscount
+            // txtDiscountId
+            // 
+            this.txtDiscountId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtDiscountId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiscountId.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtDiscountId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDiscountId.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtDiscountId.Location = new System.Drawing.Point(0, 0);
+            this.txtDiscountId.Multiline = true;
+            this.txtDiscountId.Name = "txtDiscountId";
+            this.txtDiscountId.ReadOnly = true;
+            this.txtDiscountId.Size = new System.Drawing.Size(199, 25);
+            this.txtDiscountId.TabIndex = 0;
+            // 
+            // FormAddDiscount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -358,7 +400,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddDiscount";
+            this.Name = "FormAddDiscount";
             this.Text = "AddDiscount";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -369,6 +411,8 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -395,5 +439,8 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txtDiscountName;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpEndTime;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtDiscountId;
     }
 }

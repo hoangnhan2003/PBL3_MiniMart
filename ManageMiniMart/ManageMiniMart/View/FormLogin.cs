@@ -143,6 +143,11 @@ namespace Register_Login
                     
                 }
             }
+            else
+            {
+                MyMessageBox messageBox = new MyMessageBox();
+                messageBox.show("User id or password wrong! ");
+            }
             
         }
 
@@ -156,7 +161,10 @@ namespace Register_Login
             if(e.KeyCode == Keys.Enter )
             {
                 btnLogin_Click(sender, e);
+                txtPassword.Text = "";
+                txtPassword.Focus();
             }
+            
         }
     }
 }

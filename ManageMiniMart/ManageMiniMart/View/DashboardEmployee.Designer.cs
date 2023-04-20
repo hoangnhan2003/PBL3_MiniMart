@@ -94,7 +94,7 @@
             this.btnLogin.Padding = new System.Windows.Forms.Padding(10);
             this.btnLogin.Size = new System.Drawing.Size(200, 57);
             this.btnLogin.TabIndex = 10;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Log out";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogin.UseVisualStyleBackColor = true;

@@ -54,12 +54,12 @@
             this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProduct = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.DiscountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categorynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiscountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -137,9 +137,9 @@
             this.lblEmployeeName.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblEmployeeName.Location = new System.Drawing.Point(66, 66);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(149, 22);
+            this.lblEmployeeName.Size = new System.Drawing.Size(68, 22);
             this.lblEmployeeName.TabIndex = 0;
-            this.lblEmployeeName.Text = "Ngô Hoàng Nhận";
+            this.lblEmployeeName.Text = "User01";
             this.lblEmployeeName.Click += new System.EventHandler(this.label8_Click);
             // 
             // lblEmployeeID
@@ -171,14 +171,14 @@
             // cbbPayment
             // 
             this.cbbPayment.BackColor = System.Drawing.Color.Transparent;
-            this.cbbPayment.BorderColor = System.Drawing.Color.Transparent;
+            this.cbbPayment.BorderColor = System.Drawing.Color.MediumSeaGreen;
             this.cbbPayment.BorderRadius = 10;
             this.cbbPayment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbbPayment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbPayment.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.cbbPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.cbbPayment.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbbPayment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbPayment.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbPayment.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbPayment.ForeColor = System.Drawing.Color.White;
             this.cbbPayment.ItemHeight = 30;
             this.cbbPayment.Location = new System.Drawing.Point(230, 177);
@@ -451,6 +451,13 @@
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // DiscountId
+            // 
+            this.DiscountId.DataPropertyName = "DiscountId";
+            this.DiscountId.HeaderText = "DiscountId";
+            this.DiscountId.MinimumWidth = 6;
+            this.DiscountId.Name = "DiscountId";
+            // 
             // productIdDataGridViewTextBoxColumn
             // 
             this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
@@ -485,13 +492,6 @@
             this.categorynameDataGridViewTextBoxColumn.HeaderText = "Category_name";
             this.categorynameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categorynameDataGridViewTextBoxColumn.Name = "categorynameDataGridViewTextBoxColumn";
-            // 
-            // DiscountId
-            // 
-            this.DiscountId.DataPropertyName = "DiscountId";
-            this.DiscountId.HeaderText = "DiscountId";
-            this.DiscountId.MinimumWidth = 6;
-            this.DiscountId.Name = "DiscountId";
             // 
             // saleDataGridViewTextBoxColumn
             // 

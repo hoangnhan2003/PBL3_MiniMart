@@ -55,7 +55,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 142);
+            this.panel1.Size = new System.Drawing.Size(865, 123);
             this.panel1.TabIndex = 0;
             // 
             // cbbSort
@@ -71,9 +71,9 @@
             this.cbbSort.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbSort.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.cbbSort.ItemHeight = 30;
-            this.cbbSort.Location = new System.Drawing.Point(331, 60);
+            this.cbbSort.Location = new System.Drawing.Point(310, 41);
             this.cbbSort.Name = "cbbSort";
-            this.cbbSort.Size = new System.Drawing.Size(140, 36);
+            this.cbbSort.Size = new System.Drawing.Size(130, 36);
             this.cbbSort.TabIndex = 13;
             // 
             // btnSearch
@@ -93,7 +93,7 @@
             this.btnSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnSearch.Location = new System.Drawing.Point(766, 57);
+            this.btnSearch.Location = new System.Drawing.Point(766, 33);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(66, 42);
             this.btnSearch.TabIndex = 12;
@@ -114,7 +114,7 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(521, 60);
+            this.txtSearch.Location = new System.Drawing.Point(521, 36);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -137,7 +137,7 @@
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnEdit.Location = new System.Drawing.Point(185, 52);
+            this.btnEdit.Location = new System.Drawing.Point(185, 29);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(101, 48);
             this.btnEdit.TabIndex = 10;
@@ -158,7 +158,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(28, 52);
+            this.guna2Button1.Location = new System.Drawing.Point(28, 30);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(101, 48);
             this.guna2Button1.TabIndex = 10;
@@ -169,9 +169,9 @@
             // 
             this.panel2.Controls.Add(this.dgvCustomer);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 142);
+            this.panel2.Location = new System.Drawing.Point(0, 123);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(865, 398);
+            this.panel2.Size = new System.Drawing.Size(865, 417);
             this.panel2.TabIndex = 1;
             // 
             // dgvCustomer
@@ -211,7 +211,7 @@
             this.dgvCustomer.RowTemplate.Height = 50;
             this.dgvCustomer.RowTemplate.ReadOnly = true;
             this.dgvCustomer.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.Size = new System.Drawing.Size(865, 398);
+            this.dgvCustomer.Size = new System.Drawing.Size(865, 417);
             this.dgvCustomer.TabIndex = 2;
             this.dgvCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCustomer.ThemeStyle.AlternatingRowsStyle.Font = null;

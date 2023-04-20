@@ -185,16 +185,16 @@
             this.cbbRole.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbRole.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.cbbRole.ItemHeight = 30;
-            this.cbbRole.Location = new System.Drawing.Point(391, 436);
+            this.cbbRole.Location = new System.Drawing.Point(387, 436);
             this.cbbRole.Name = "cbbRole";
             this.cbbRole.Size = new System.Drawing.Size(199, 36);
-            this.cbbRole.TabIndex = 42;
+            this.cbbRole.TabIndex = 8;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel8.Controls.Add(this.txtSalary);
-            this.panel8.Location = new System.Drawing.Point(391, 387);
+            this.panel8.Location = new System.Drawing.Point(388, 387);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(199, 28);
             this.panel8.TabIndex = 41;
@@ -210,7 +210,7 @@
             this.txtSalary.Multiline = true;
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(199, 25);
-            this.txtSalary.TabIndex = 0;
+            this.txtSalary.TabIndex = 7;
             // 
             // label9
             // 
@@ -258,7 +258,7 @@
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(199, 25);
-            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TabIndex = 6;
             // 
             // label4
             // 
@@ -293,7 +293,7 @@
             this.txtPhoneNumber.Multiline = true;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(199, 25);
-            this.txtPhoneNumber.TabIndex = 0;
+            this.txtPhoneNumber.TabIndex = 5;
             // 
             // dtpBirthdate
             // 
@@ -307,7 +307,7 @@
             this.dtpBirthdate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthdate.Name = "dtpBirthdate";
             this.dtpBirthdate.Size = new System.Drawing.Size(202, 36);
-            this.dtpBirthdate.TabIndex = 26;
+            this.dtpBirthdate.TabIndex = 3;
             this.dtpBirthdate.Value = new System.DateTime(2023, 4, 8, 22, 56, 26, 751);
             // 
             // btnCancel
@@ -397,7 +397,7 @@
             this.panel4.Location = new System.Drawing.Point(390, 208);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(199, 28);
-            this.panel4.TabIndex = 33;
+            this.panel4.TabIndex = 4;
             // 
             // txtAddress
             // 
@@ -458,7 +458,7 @@
             this.txtEmployeeName.Multiline = true;
             this.txtEmployeeName.Name = "txtEmployeeName";
             this.txtEmployeeName.Size = new System.Drawing.Size(199, 25);
-            this.txtEmployeeName.TabIndex = 0;
+            this.txtEmployeeName.TabIndex = 1;
             // 
             // panel6
             // 

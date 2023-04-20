@@ -69,5 +69,10 @@ namespace ManageMiniMart.BLL
             db.Discounts.AddOrUpdate(discount);
             db.SaveChanges();
         }
+        public void delete(Discount discount)
+        {
+            db.Discounts.Remove(discount);
+            db.SaveChanges(); 
+        }
     }
 }

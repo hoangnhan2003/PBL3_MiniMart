@@ -54,22 +54,48 @@ namespace ManageMiniMart.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int discountId = Convert.ToInt32(txtDiscountId.Text);
             string discountName = txtDiscountName.Text;
             DateTime startTime = dtpStartTime.Value.ToUniversalTime();
             DateTime endTime = dtpEndTime.Value.ToUniversalTime();
             int sale = Convert.ToInt32(txtSale.Text);
-            Discount discount= new Discount { 
-                discount_name= discountName,
-                start_time= startTime,
-                end_time= endTime,
-                sale= sale
-            };
-            discountService.save(discount);
+            if (txtDiscountId.Text.All(char.IsDigit))
+            {
+                Discount discount = new Discount
+                {
+                    discount_id = discountId,
+                    discount_name = discountName,
+                    start_time = startTime,
+                    end_time = endTime,
+                    sale = sale
+                };
+                discountService.save(discount);
+            }
+            else
+            {
+                Discount discount = new Discount
+                {
+                    discount_name = discountName,
+                    start_time = startTime,
+                    end_time = endTime,
+                    sale = sale
+                };
+                discountService.save(discount);
+            }
             MyMessageBox messageBox = new MyMessageBox();
-            messageBox.show("Add discount successful!!");
+            messageBox.show("Save discount successful!!");
             Dispose();
 
 
+        }
+        public void setDiscount(int discountId)
+        {
+            Discount discount = discountService.getById(discountId);
+            txtDiscountName.Text = discount.discount_name;
+            txtSale.Text = discount.sale.ToString();
+            txtDiscountId.Text = discount.discount_id.ToString();
+            dtpStartTime.Value = discount.start_time;
+            dtpEndTime.Value = discount.end_time;
         }
     }
 }

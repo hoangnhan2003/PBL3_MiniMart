@@ -63,7 +63,7 @@ namespace ManageMiniMart.Custom
             }
             this.ShowDialog();
         }
-        public DialogResult show(string message, string title, TypeMessage typeMessage,TypeIcon icon)
+        public DialogResult show(string message, string title, TypeMessage typeMessage = TypeMessage.YESNO,TypeIcon icon = TypeIcon.QUESTION)
         {
             lblText.Text = message;
             lblTitle.Text = title;
