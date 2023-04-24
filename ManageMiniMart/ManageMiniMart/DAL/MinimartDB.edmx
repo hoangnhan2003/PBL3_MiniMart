@@ -105,7 +105,7 @@
           <Key>
             <PropertyRef Name="shift_id" />
           </Key>
-          <Property Name="shift_id" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="shift_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="shift_name" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="start_time" Type="datetime" Nullable="false" />
           <Property Name="end_time" Type="datetime" Nullable="false" />
@@ -116,7 +116,7 @@
             <PropertyRef Name="shift_id" />
           </Key>
           <Property Name="person_id" Type="varchar" MaxLength="12" Nullable="false" />
-          <Property Name="shift_id" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="shift_id" Type="int" Nullable="false" />
           <Property Name="check_done" Type="bit" />
         </EntityType>
         <Association Name="FK__Account__person___48CFD27E">
@@ -433,7 +433,7 @@
           <Key>
             <PropertyRef Name="shift_id" />
           </Key>
-          <Property Name="shift_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="shift_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="shift_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="start_time" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="end_time" Type="DateTime" Nullable="false" Precision="3" />
@@ -445,7 +445,7 @@
             <PropertyRef Name="shift_id" />
           </Key>
           <Property Name="person_id" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="shift_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="shift_id" Type="Int32" Nullable="false" />
           <Property Name="check_done" Type="Boolean" />
           <NavigationProperty Name="Account" Relationship="Self.FK__Shift_wor__perso__4D94879B" FromRole="Shift_work" ToRole="Account" />
           <NavigationProperty Name="Shift_detail" Relationship="Self.FK__Shift_wor__shift__4E88ABD4" FromRole="Shift_work" ToRole="Shift_detail" />

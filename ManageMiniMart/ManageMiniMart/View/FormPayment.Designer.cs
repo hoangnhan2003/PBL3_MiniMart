@@ -167,6 +167,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(267, 115);
             this.guna2Panel1.TabIndex = 6;
+            this.guna2Panel1.Visible = false;
             // 
             // cbbPayment
             // 
@@ -214,9 +215,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label5.Location = new System.Drawing.Point(37, 245);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 23);
+            this.label5.Size = new System.Drawing.Size(106, 23);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Custusmer ID";
+            this.label5.Text = "Customer ID";
             // 
             // btnPrint
             // 

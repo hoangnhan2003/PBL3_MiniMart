@@ -242,6 +242,7 @@ namespace ManageMiniMart
         private void btnShiftWork_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.orangeLight);
+            OpenChildForm(new FormShiftWork());
         }
 
         private void btnInfo_Click(object sender, EventArgs e)

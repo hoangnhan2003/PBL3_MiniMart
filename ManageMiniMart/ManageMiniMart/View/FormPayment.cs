@@ -15,7 +15,7 @@ using System.Windows.Forms;
 namespace ManageMiniMart.View
 {
     public delegate void SendData(int productId,int amount);
-    public delegate void CustomerDelegate(string name);
+    public delegate void CustomerDelegate(string customerId);
     public partial class FormPayment : Form
     {
         private ProductService productService;

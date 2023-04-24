@@ -40,6 +40,7 @@
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProduct = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,8 +48,8 @@
             this.categorynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.productDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iconDropDownButton1 = new FontAwesome.Sharp.IconDropDownButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -214,6 +215,19 @@
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
+            // ADD
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ADD.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ADD.HeaderText = "Action";
+            this.ADD.MinimumWidth = 6;
+            this.ADD.Name = "ADD";
+            this.ADD.Text = "ADD";
+            this.ADD.UseColumnTextForButtonValue = true;
+            // 
             // productId
             // 
             this.productId.DataPropertyName = "ProductId";
@@ -263,22 +277,18 @@
             this.brandDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.brandDataGridViewTextBoxColumn.Name = "brandDataGridViewTextBoxColumn";
             // 
-            // ADD
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ADD.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ADD.HeaderText = "Action";
-            this.ADD.MinimumWidth = 6;
-            this.ADD.Name = "ADD";
-            this.ADD.Text = "ADD";
-            this.ADD.UseColumnTextForButtonValue = true;
-            // 
             // productDTOBindingSource
             // 
             this.productDTOBindingSource.DataSource = typeof(ManageMiniMart.DTO.ProductDTO);
+            // 
+            // iconDropDownButton1
+            // 
+            this.iconDropDownButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconDropDownButton1.IconColor = System.Drawing.Color.Black;
+            this.iconDropDownButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconDropDownButton1.Name = "iconDropDownButton1";
+            this.iconDropDownButton1.Size = new System.Drawing.Size(23, 23);
+            this.iconDropDownButton1.Text = "iconDropDownButton1";
             // 
             // SelectProductForm
             // 
@@ -317,5 +327,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn saleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn ADD;
+        private FontAwesome.Sharp.IconDropDownButton iconDropDownButton1;
     }
 }

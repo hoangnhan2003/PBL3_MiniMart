@@ -100,7 +100,7 @@
     <Key>
       <PropertyRef Name="shift_id" />
     </Key>
-    <Property Name="shift_id" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="shift_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="shift_name" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="start_time" Type="datetime" Nullable="false" />
     <Property Name="end_time" Type="datetime" Nullable="false" />
@@ -111,7 +111,7 @@
       <PropertyRef Name="shift_id" />
     </Key>
     <Property Name="person_id" Type="varchar" MaxLength="12" Nullable="false" />
-    <Property Name="shift_id" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="shift_id" Type="int" Nullable="false" />
     <Property Name="check_done" Type="bit" />
   </EntityType>
   <Association Name="FK__Account__person___48CFD27E">

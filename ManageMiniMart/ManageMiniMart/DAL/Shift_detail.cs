@@ -20,7 +20,7 @@ namespace ManageMiniMart.DAL
             this.Shift_work = new HashSet<Shift_work>();
         }
     
-        public string shift_id { get; set; }
+        public int shift_id { get; set; }
         public string shift_name { get; set; }
         public System.DateTime start_time { get; set; }
         public System.DateTime end_time { get; set; }
