@@ -7,7 +7,6 @@
     <Property Name="person_id" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="role_id" Type="int" Nullable="false" />
     <Property Name="password" Type="varchar" MaxLength="30" />
-    <Property Name="shift_id" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="Bill">
     <Key>

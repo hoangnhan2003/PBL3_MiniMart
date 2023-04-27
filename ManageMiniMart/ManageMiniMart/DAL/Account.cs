@@ -23,7 +23,6 @@ namespace ManageMiniMart.DAL
         public string person_id { get; set; }
         public int role_id { get; set; }
         public string password { get; set; }
-        public string shift_id { get; set; }
     
         public virtual Person Person { get; set; }
         public virtual Role Role { get; set; }

@@ -1,4 +1,5 @@
 ﻿using ManageMiniMart.BLL;
+using ManageMiniMart.Custom;
 using ManageMiniMart.DAL;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Media3D;
 
 namespace ManageMiniMart.View
 {
@@ -18,12 +20,14 @@ namespace ManageMiniMart.View
     {
         private EmployeeService employeeService;
         private ShiftDetailService shiftDetailService;
+        private ShiftWorkService shiftWorkService;
         private List<Person> employeeList= new List<Person> ();
         public AddShiftWork()
         {
             InitializeComponent();
             employeeService = new EmployeeService();
             shiftDetailService= new ShiftDetailService();
+            shiftWorkService= new ShiftWorkService();
             setCbbShift();
         }
         public void setCbbShift()
@@ -78,6 +82,23 @@ namespace ManageMiniMart.View
 
             }
         }
+        public void setFormAddShift(int shift)
+        {
+            Shift_detail shift_Detail = shiftDetailService.getById(shift);
+            List<string> personIds = shiftWorkService.getAllPersonByShiftDetailId(shift);
+            lblShiftId.Text = shift.ToString();
+            foreach (string personId in personIds)
+            {
+                addEmployee(personId);
+            }
+            dtpWorkDate.Value = shift_Detail.start_time;
+            cbbShiftwork.Text = "Shift 1";
+            if(shift_Detail.start_time.Hour > 10)
+            {
+                cbbShiftwork.Text = "Shift 2";
+            }
+            reloadDgvEmployee();
+        }
         public void reloadDgvEmployee()
         {
             dgvEmloyee.DataSource = null;
@@ -97,31 +118,79 @@ namespace ManageMiniMart.View
             string date = dtpWorkDate.Value.ToString("yyyy/MM/dd");
             string startTime = "06:00:00";
             string endTime = "13:59:59";
-            if(cbbShiftwork.SelectedItem.ToString() == "Shift 2")
+            if (cbbShiftwork.SelectedItem.ToString() == "Shift 2")
             {
                 startTime = "14:00:00";
                 endTime = "21:59:59";
             }
-            DateTime startTimeShift = DateTime.Parse(date +" "+ startTime);
+            DateTime startTimeShift = DateTime.Parse(date + " " + startTime);
             DateTime endTimeShift = DateTime.Parse((date + " " + endTime));
-            Shift_detail shift_Detail = new Shift_detail
+            try
             {
-                shift_name = "Shift in date "+ date,
-                start_time= startTimeShift,
-                end_time= endTimeShift
-            };
-            shiftDetailService.save(shift_Detail);
-            int shiftId = shiftDetailService.shiftIdAdded;
-            foreach(Person person in employeeList)
-            {
-                string personId = person.person_id;
+
+                if (lblShiftId.Text.Trim() == "")
+                {
+                    Shift_detail shift_Detail = new Shift_detail
+                    {
+                        shift_name = "Shift in date " + date,
+                        start_time = startTimeShift,
+                        end_time = endTimeShift
+                    };
+                    shiftDetailService.save(shift_Detail);
+                }
+
+                
+                int shiftId = shiftDetailService.shiftIdAdded | Convert.ToInt32(lblShiftId.Text);
+                shiftWorkService.deleteByShiftWorkId(shiftId);
+                foreach (Person person in employeeList)
+                {
+                    string personId = person.person_id;
+                    Shift_work shift_Work = new Shift_work
+                    {
+                        shift_id = shiftId,
+                        person_id = personId,
+
+                    };
+                    shiftWorkService.save(shift_Work);
+                    
+                }
             }
-            MessageBox.Show("Start time = " + startTimeShift + "\n endTime = " + endTimeShift);
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            //MessageBox.Show("Start time = " + startTimeShift + "\n endTime = " + endTimeShift);
+            MyMessageBox myMessageBox = new MyMessageBox();
+            myMessageBox.show("Add shift work successful!");
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void btnMaximun_Click(object sender, EventArgs e)
+        {
+
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else if (WindowState == FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void dgvEmloyee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvEmloyee.Columns[e.ColumnIndex].Name == "Remove")
+            {
+                string personId = dgvEmloyee.SelectedRows[0].Cells[0].Value.ToString();
+                Person person = employeeService.GetPersonById(personId);
+                employeeList.Remove(person);
+                reloadDgvEmployee();
+            }
         }
     }
 }

@@ -7,7 +7,6 @@
           <ScalarProperty Name="person_id" ColumnName="person_id" />
           <ScalarProperty Name="role_id" ColumnName="role_id" />
           <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="shift_id" ColumnName="shift_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

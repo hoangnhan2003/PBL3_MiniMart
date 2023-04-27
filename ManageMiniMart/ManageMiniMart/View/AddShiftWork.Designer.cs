@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -51,16 +52,28 @@
             this.dtpWorkDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.Remove = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.personidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phonenumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblShiftId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmloyee)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(95)))));
             this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.btnMaximun);
             this.panel1.Controls.Add(this.btnExit);
@@ -107,6 +120,7 @@
             this.btnMaximun.Size = new System.Drawing.Size(27, 30);
             this.btnMaximun.TabIndex = 32;
             this.btnMaximun.UseVisualStyleBackColor = true;
+            this.btnMaximun.Click += new System.EventHandler(this.btnMaximun_Click);
             // 
             // btnExit
             // 
@@ -165,6 +179,7 @@
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
             this.dgvEmloyee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmloyee.AutoGenerateColumns = false;
             this.dgvEmloyee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -176,7 +191,17 @@
             this.dgvEmloyee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmloyee.ColumnHeadersHeight = 50;
             this.dgvEmloyee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvEmloyee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.personidDataGridViewTextBoxColumn,
+            this.personnameDataGridViewTextBoxColumn,
+            this.birthdateDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.phonenumberDataGridViewTextBoxColumn,
+            this.salaryDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.Remove});
             this.dgvEmloyee.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dgvEmloyee.DataSource = this.personBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,6 +243,7 @@
             this.dgvEmloyee.ThemeStyle.RowsStyle.Height = 50;
             this.dgvEmloyee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvEmloyee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvEmloyee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmloyee_CellContentClick);
             // 
             // panel4
             // 
@@ -273,6 +299,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblShiftId);
             this.panel3.Controls.Add(this.cbbShiftwork);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
@@ -398,6 +425,76 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "EmployeeName";
             // 
+            // Remove
+            // 
+            this.Remove.HeaderText = "REMOVE";
+            this.Remove.MinimumWidth = 6;
+            this.Remove.Name = "Remove";
+            this.Remove.Text = "remove";
+            this.Remove.UseColumnTextForButtonValue = true;
+            // 
+            // personidDataGridViewTextBoxColumn
+            // 
+            this.personidDataGridViewTextBoxColumn.DataPropertyName = "person_id";
+            this.personidDataGridViewTextBoxColumn.HeaderText = "person_id";
+            this.personidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.personidDataGridViewTextBoxColumn.Name = "personidDataGridViewTextBoxColumn";
+            // 
+            // personnameDataGridViewTextBoxColumn
+            // 
+            this.personnameDataGridViewTextBoxColumn.DataPropertyName = "person_name";
+            this.personnameDataGridViewTextBoxColumn.HeaderText = "person_name";
+            this.personnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.personnameDataGridViewTextBoxColumn.Name = "personnameDataGridViewTextBoxColumn";
+            // 
+            // birthdateDataGridViewTextBoxColumn
+            // 
+            this.birthdateDataGridViewTextBoxColumn.DataPropertyName = "birthdate";
+            this.birthdateDataGridViewTextBoxColumn.HeaderText = "birthdate";
+            this.birthdateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.birthdateDataGridViewTextBoxColumn.Name = "birthdateDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // phonenumberDataGridViewTextBoxColumn
+            // 
+            this.phonenumberDataGridViewTextBoxColumn.DataPropertyName = "phone_number";
+            this.phonenumberDataGridViewTextBoxColumn.HeaderText = "phone_number";
+            this.phonenumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phonenumberDataGridViewTextBoxColumn.Name = "phonenumberDataGridViewTextBoxColumn";
+            // 
+            // salaryDataGridViewTextBoxColumn
+            // 
+            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "salary";
+            this.salaryDataGridViewTextBoxColumn.HeaderText = "salary";
+            this.salaryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataSource = typeof(ManageMiniMart.DAL.Person);
+            // 
+            // lblShiftId
+            // 
+            this.lblShiftId.AutoSize = true;
+            this.lblShiftId.Location = new System.Drawing.Point(549, 31);
+            this.lblShiftId.Name = "lblShiftId";
+            this.lblShiftId.Size = new System.Drawing.Size(0, 16);
+            this.lblShiftId.TabIndex = 31;
+            this.lblShiftId.Visible = false;
+            // 
             // AddShiftWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -417,6 +514,7 @@
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,5 +539,15 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2DataGridView dgvEmloyee;
+        private System.Windows.Forms.BindingSource personBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn birthdateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phonenumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Remove;
+        private System.Windows.Forms.Label lblShiftId;
     }
 }

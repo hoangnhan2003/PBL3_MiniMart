@@ -20,11 +20,15 @@ namespace ManageMiniMart.View
         private Panel leftBorderBtn;
         private Form currentChildForm;
         private Account currentAccount;
+        private ShowLogin showLogin;
+        private CloseLogin closeLogin;
 
-        public DashboardEmployee(Account account = null)
+        public DashboardEmployee(Account account = null,ShowLogin actionLogin = null,CloseLogin close = null)
         {
 
             InitializeComponent();
+            this.showLogin = actionLogin;
+            this.closeLogin= close;
             this.currentAccount= account;
             //this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 50, 50));
             leftBorderBtn = new Panel();
@@ -153,8 +157,8 @@ namespace ManageMiniMart.View
         private void btnLogin_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.color6);
-            FormLogin formLogin = new FormLogin();
-            formLogin.ShowDialog();
+            this.showLogin();
+            Dispose();
         }
 
         private void pictureBoxDashboard_Click(object sender, EventArgs e)
@@ -198,7 +202,9 @@ namespace ManageMiniMart.View
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            this.closeLogin();
             Close();
+            
         }
         private void btnMinimize_Click(object sender, EventArgs e)
         {
@@ -218,6 +224,7 @@ namespace ManageMiniMart.View
         private void btnShiftWork_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.orangeLight);
+            OpenChildForm(new FormShiftWorkForEmployee());
         }
 
         private void btnInfo_Click(object sender, EventArgs e)

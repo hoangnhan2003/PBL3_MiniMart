@@ -23,11 +23,14 @@ namespace ManageMiniMart
         private Panel leftBorderBtn;
         private Form currentChildForm;
         private Account currentAccount;
-        public Dashboard(Account account = null)
+        private ShowLogin showLogin;
+        private CloseLogin closeLogin;
+        public Dashboard(Account account = null,ShowLogin actionOnLogin = null,CloseLogin close = null)
         {
 
             InitializeComponent();
             this.currentAccount = account;
+            this.closeLogin= close;
             if(currentAccount!= null)
             {
                 setUser();
@@ -41,6 +44,7 @@ namespace ManageMiniMart
             this.ControlBox = false;
             this.DoubleBuffered= true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;  
+            this.showLogin= actionOnLogin;
         }
         //Structs
         private struct RBGColor
@@ -154,8 +158,8 @@ namespace ManageMiniMart
         private void btnLogin_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.color6);
-            FormLogin formLogin = new FormLogin();
-            formLogin.ShowDialog();
+            this.showLogin();
+            Dispose();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -199,7 +203,9 @@ namespace ManageMiniMart
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Close();
+            this.closeLogin();
+            Dispose();
+            
         }
         private void btnMinimize_Click(object sender, EventArgs e)
         {

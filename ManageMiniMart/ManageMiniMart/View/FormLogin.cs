@@ -16,6 +16,8 @@ using System.Windows.Forms;
 
 namespace Register_Login
 {
+    public delegate void ShowLogin();
+    public delegate void CloseLogin();
     public partial class FormLogin : Form
     {
        
@@ -128,17 +130,19 @@ namespace Register_Login
         {
             string userId = txtUserId.Text;
             string password = txtPassword.Text;
-            Account account = userService.checkUser(userId, password);
+            Account account = userService.checkUser(userId,password);
             if(account != null)
             {
                 if(account.role_id == 1)
                 {
-                    DashboardEmployee employee = new DashboardEmployee(account);
+                    DashboardEmployee employee = new DashboardEmployee(account,showAgain,closeForm);
+                    Hide();
                     employee.Show();
                 }
                 else
                 {
-                    Dashboard dashboard = new Dashboard(account);
+                    Dashboard dashboard = new Dashboard(account,showAgain,closeForm);
+                    Hide();
                     dashboard.Show();
                     
                 }
@@ -165,6 +169,14 @@ namespace Register_Login
                 txtPassword.Focus();
             }
             
+        }
+        public void showAgain()
+        {
+            Show();
+        }
+        private void closeForm()
+        {
+            Dispose();
         }
     }
 }

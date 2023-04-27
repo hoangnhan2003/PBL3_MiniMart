@@ -267,6 +267,12 @@
     <Compile Include="View\FormShiftWork.Designer.cs">
       <DependentUpon>FormShiftWork.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormShiftWorkForEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormShiftWorkForEmployee.Designer.cs">
+      <DependentUpon>FormShiftWorkForEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form_Alert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormShiftWork.resx">
       <DependentUpon>FormShiftWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormShiftWorkForEmployee.resx">
+      <DependentUpon>FormShiftWorkForEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
