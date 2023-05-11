@@ -1,4 +1,5 @@
 ﻿using ManageMiniMart.BLL;
+using ManageMiniMart.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,17 @@ namespace ManageMiniMart
         {
             string customerName = txtSearch.Text;
             dgvBill.DataSource = billService.getAllBillViewByCustomerName(customerName);
+        }
+
+        private void dgvBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvBill.Columns[e.ColumnIndex].Name == "detailBill")
+            {
+                FormDetailBill formDetailBill = new FormDetailBill();
+                int billId = Convert.ToInt16(dgvBill.SelectedRows[0].Cells[0].Value.ToString());
+                formDetailBill.setDatagridView(billId);
+                formDetailBill.Show();
+            }
         }
     }
 }

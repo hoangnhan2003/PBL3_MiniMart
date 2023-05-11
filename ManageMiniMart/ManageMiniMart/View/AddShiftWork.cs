@@ -21,14 +21,16 @@ namespace ManageMiniMart.View
         private EmployeeService employeeService;
         private ShiftDetailService shiftDetailService;
         private ShiftWorkService shiftWorkService;
+        private int action; // 0: Add; 1:Edit
         private List<Person> employeeList= new List<Person> ();
-        public AddShiftWork()
+        public AddShiftWork(int action = 0)
         {
             InitializeComponent();
             employeeService = new EmployeeService();
-            shiftDetailService= new ShiftDetailService();
-            shiftWorkService= new ShiftWorkService();
+            shiftDetailService = new ShiftDetailService();
+            shiftWorkService = new ShiftWorkService();
             setCbbShift();
+            this.action = action;
         }
         public void setCbbShift()
         {
@@ -125,43 +127,56 @@ namespace ManageMiniMart.View
             }
             DateTime startTimeShift = DateTime.Parse(date + " " + startTime);
             DateTime endTimeShift = DateTime.Parse((date + " " + endTime));
-            try
+            if (shiftDetailService.checkTime(startTimeShift) || action == 1)
             {
-
-                if (lblShiftId.Text.Trim() == "")
+                try
                 {
-                    Shift_detail shift_Detail = new Shift_detail
-                    {
-                        shift_name = "Shift in date " + date,
-                        start_time = startTimeShift,
-                        end_time = endTimeShift
-                    };
-                    shiftDetailService.save(shift_Detail);
-                }
 
-                
-                int shiftId = shiftDetailService.shiftIdAdded | Convert.ToInt32(lblShiftId.Text);
-                shiftWorkService.deleteByShiftWorkId(shiftId);
-                foreach (Person person in employeeList)
+                    if (lblShiftId.Text.Trim() == "")
+                    {
+                        Shift_detail shift_Detail = new Shift_detail
+                        {
+                            shift_name = "Shift in date " + date,
+                            start_time = startTimeShift,
+                            end_time = endTimeShift
+                        };
+                        shiftDetailService.save(shift_Detail);
+                    }
+
+
+                    int shiftId = shiftDetailService.shiftIdAdded;/* Convert.ToInt32(lblShiftId.Text);*/
+                    if (lblShiftId.Text.Trim() != "")
+                    {
+                        shiftId = Convert.ToInt32(lblShiftId.Text);
+                    }
+                    shiftWorkService.deleteByShiftWorkId(shiftId);
+                    foreach (Person person in employeeList)
+                    {
+                        string personId = person.person_id;
+                        Shift_work shift_Work = new Shift_work
+                        {
+                            shift_id = shiftId,
+                            person_id = personId,
+
+                        };
+                        shiftWorkService.save(shift_Work);
+
+                    }
+                }
+                catch (Exception ex)
                 {
-                    string personId = person.person_id;
-                    Shift_work shift_Work = new Shift_work
-                    {
-                        shift_id = shiftId,
-                        person_id = personId,
-
-                    };
-                    shiftWorkService.save(shift_Work);
-                    
+                    MessageBox.Show(ex.Message);
                 }
+                //MessageBox.Show("Start time = " + startTimeShift + "\n endTime = " + endTimeShift);
+                MyMessageBox myMessageBox = new MyMessageBox();
+                myMessageBox.show("Add shift work successful!");
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MyMessageBox myMessageBox = new MyMessageBox();
+                myMessageBox.show("Duplicate time !");
             }
-            //MessageBox.Show("Start time = " + startTimeShift + "\n endTime = " + endTimeShift);
-            MyMessageBox myMessageBox = new MyMessageBox();
-            myMessageBox.show("Add shift work successful!");
+           
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

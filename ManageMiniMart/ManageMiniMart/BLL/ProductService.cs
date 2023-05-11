@@ -20,7 +20,7 @@ namespace ManageMiniMart.BLL
         }
         public List<ProductDTO> getAllProduct()
         {
-            List<ProductDTO> products = new List<ProductDTO>();
+            List<ProductDTO> products;
             var l = db.Products.ToList();
             products = convertListDTO(l);
             return products;

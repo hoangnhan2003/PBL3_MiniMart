@@ -1,6 +1,7 @@
 ﻿using ManageMiniMart.DAL;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,15 @@ namespace ManageMiniMart.BLL
         public int getRole(Account account)
         {
             return account.Role.role_id;
+        }
+        public Account getByUserID(string userId)
+        {
+            return db.Accounts.Find(userId);
+        }
+        public void saveUser(Account account)
+        {
+            db.Accounts.AddOrUpdate(account);
+            db.SaveChanges();
         }
     }
 }

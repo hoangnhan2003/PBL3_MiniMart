@@ -54,12 +54,12 @@
             this.btnFind = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.DiscountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categorynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -452,13 +452,6 @@
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // DiscountId
-            // 
-            this.DiscountId.DataPropertyName = "DiscountId";
-            this.DiscountId.HeaderText = "DiscountId";
-            this.DiscountId.MinimumWidth = 6;
-            this.DiscountId.Name = "DiscountId";
-            // 
             // productIdDataGridViewTextBoxColumn
             // 
             this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
@@ -493,6 +486,13 @@
             this.categorynameDataGridViewTextBoxColumn.HeaderText = "Category_name";
             this.categorynameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categorynameDataGridViewTextBoxColumn.Name = "categorynameDataGridViewTextBoxColumn";
+            // 
+            // DiscountId
+            // 
+            this.DiscountId.DataPropertyName = "DiscountId";
+            this.DiscountId.HeaderText = "DiscountId";
+            this.DiscountId.MinimumWidth = 6;
+            this.DiscountId.Name = "DiscountId";
             // 
             // saleDataGridViewTextBoxColumn
             // 

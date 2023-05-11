@@ -40,8 +40,9 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvBill = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreatedTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detailBill = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -194,7 +195,8 @@
             this.CreatedTime,
             this.customerNameDataGridViewTextBoxColumn,
             this.employeeNameDataGridViewTextBoxColumn,
-            this.totalDataGridViewTextBoxColumn});
+            this.totalDataGridViewTextBoxColumn,
+            this.detailBill});
             this.dgvBill.DataSource = this.billViewBindingSource2;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -237,13 +239,7 @@
             this.dgvBill.ThemeStyle.RowsStyle.Height = 50;
             this.dgvBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.dgvBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellContentClick);
             // 
             // CreatedTime
             // 
@@ -251,6 +247,21 @@
             this.CreatedTime.HeaderText = "CreatedTime";
             this.CreatedTime.MinimumWidth = 6;
             this.CreatedTime.Name = "CreatedTime";
+            // 
+            // detailBill
+            // 
+            this.detailBill.HeaderText = "Details";
+            this.detailBill.MinimumWidth = 6;
+            this.detailBill.Name = "detailBill";
+            this.detailBill.Text = "Details";
+            this.detailBill.UseColumnTextForButtonValue = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
             // customerNameDataGridViewTextBoxColumn
             // 
@@ -327,5 +338,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn customerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn detailBill;
     }
 }

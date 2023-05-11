@@ -156,6 +156,7 @@
     <Compile Include="DAL\Shift_work.cs">
       <DependentUpon>MinimartDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\BillDetails.cs" />
     <Compile Include="DTO\BillView.cs" />
     <Compile Include="DTO\CBBItem.cs" />
     <Compile Include="DTO\CBBPerson.cs" />
@@ -189,11 +190,23 @@
     <Compile Include="View\AddShiftWork.Designer.cs">
       <DependentUpon>AddShiftWork.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\DashboardEmployee.cs">
+    <Compile Include="View\ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\DashboardEmployee.Designer.cs">
+    <Compile Include="View\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployeeView\DashboardEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmployeeView\DashboardEmployee.Designer.cs">
       <DependentUpon>DashboardEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormDetailBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDetailBill.Designer.cs">
+      <DependentUpon>FormDetailBill.cs</DependentUpon>
     </Compile>
     <Compile Include="View\EmployeeForm.cs">
       <SubType>Form</SubType>
@@ -255,10 +268,10 @@
     <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormProductForEmployee.cs">
+    <Compile Include="View\EmployeeView\FormProductForEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormProductForEmployee.Designer.cs">
+    <Compile Include="View\EmployeeView\FormProductForEmployee.Designer.cs">
       <DependentUpon>FormProductForEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormShiftWork.cs">
@@ -267,10 +280,10 @@
     <Compile Include="View\FormShiftWork.Designer.cs">
       <DependentUpon>FormShiftWork.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormShiftWorkForEmployee.cs">
+    <Compile Include="View\EmployeeView\FormShiftWorkForEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormShiftWorkForEmployee.Designer.cs">
+    <Compile Include="View\EmployeeView\FormShiftWorkForEmployee.Designer.cs">
       <DependentUpon>FormShiftWorkForEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Form_Alert.cs">
@@ -287,6 +300,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\InfomationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InfomationForm.Designer.cs">
+      <DependentUpon>InfomationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\SelectCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,7 +342,10 @@
     <EmbeddedResource Include="View\AddShiftWork.resx">
       <DependentUpon>AddShiftWork.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\DashboardEmployee.resx">
+    <EmbeddedResource Include="View\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmployeeView\DashboardEmployee.resx">
       <DependentUpon>DashboardEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EmployeeForm.resx">
@@ -337,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormAnalyst.resx">
       <DependentUpon>FormAnalyst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDetailBill.resx">
+      <DependentUpon>FormDetailBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormDiscount.resx">
       <DependentUpon>FormDiscount.cs</DependentUpon>
@@ -356,13 +381,13 @@
     <EmbeddedResource Include="View\FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormProductForEmployee.resx">
+    <EmbeddedResource Include="View\EmployeeView\FormProductForEmployee.resx">
       <DependentUpon>FormProductForEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormShiftWork.resx">
       <DependentUpon>FormShiftWork.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormShiftWorkForEmployee.resx">
+    <EmbeddedResource Include="View\EmployeeView\FormShiftWorkForEmployee.resx">
       <DependentUpon>FormShiftWorkForEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form_Alert.resx">
@@ -380,6 +405,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\InfomationForm.resx">
+      <DependentUpon>InfomationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SelectCustomerForm.resx">
       <DependentUpon>SelectCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +426,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ManageMiniMart.DAL.Person.datasource" />
+    <None Include="Properties\DataSources\ManageMiniMart.DTO.BillDetails.datasource" />
     <None Include="Properties\DataSources\ManageMiniMart.DTO.BillView.datasource" />
     <None Include="Properties\DataSources\ManageMiniMart.DTO.CustomerView.datasource" />
     <None Include="Properties\DataSources\ManageMiniMart.DTO.ProductDTO.datasource" />
@@ -424,10 +453,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\EmployeeView\" />
-    <Folder Include="View\ManagerView\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DAL\MinimartDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

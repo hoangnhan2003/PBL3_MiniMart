@@ -12,8 +12,10 @@ namespace ManageMiniMart.BLL
     internal class StatisticalService
     {
         private Manage_MinimartEntities db;
+        private BillService billService;
         public StatisticalService() {
             db = new Manage_MinimartEntities();
+            billService = new BillService();
         }
 
         public List<int> getAllYear()
@@ -29,7 +31,6 @@ namespace ManageMiniMart.BLL
         
         public Revenue getAllRevenue(int year,int month)
         {
-            List<Revenue> revenues= new List<Revenue>();
             // Total money bill in month,year
             double total = 0;
             var bills = db.Bills.Where(b => b.created_time.Year == year && b.created_time.Month == month).ToList();
@@ -49,6 +50,27 @@ namespace ManageMiniMart.BLL
                 Year= year,
                 Value = total
             };
+        }
+        public double getAllRevenueInDate (DateTime date)
+        {
+            double total = 0;
+            var BillsEnum = db.Bills.AsEnumerable();
+            List<Bill> billInDate = BillsEnum.Where( b => b.created_time.Date == date.Date).ToList();
+            foreach(Bill bill in billInDate)
+            {
+                total += billService.getTotalByBill(bill.bill_id);
+            }
+            return total;
+        }
+        public double getAllRevenueInYear(int year)
+        {
+            double total = 0;
+            var bills = db.Bills.Where(b => b.created_time.Year== year).ToList();
+            foreach(var bill in bills)
+            {
+                total += billService.getTotalByBill(bill.bill_id);
+            }
+            return total;
         }
     }
 }

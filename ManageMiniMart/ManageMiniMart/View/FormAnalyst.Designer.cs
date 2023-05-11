@@ -35,20 +35,20 @@
             this.chartRevenue = new LiveCharts.WinForms.CartesianChart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblYearSale = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDailySale = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblMonthlySale = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbSelectCustomerByYear = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalCustomer = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chartCustomer = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -101,7 +101,7 @@
             this.guna2Panel3.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.BorderRadius = 40;
             this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.label5);
+            this.guna2Panel3.Controls.Add(this.lblYearSale);
             this.guna2Panel3.Controls.Add(this.label6);
             this.guna2Panel3.Controls.Add(this.pictureBox3);
             this.guna2Panel3.FillColor = System.Drawing.Color.Navy;
@@ -111,16 +111,16 @@
             this.guna2Panel3.Size = new System.Drawing.Size(194, 171);
             this.guna2Panel3.TabIndex = 6;
             // 
-            // label5
+            // lblYearSale
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(38, 126);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 21);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "1899445000 đ";
+            this.lblYearSale.AutoSize = true;
+            this.lblYearSale.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYearSale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblYearSale.Location = new System.Drawing.Point(38, 126);
+            this.lblYearSale.Name = "lblYearSale";
+            this.lblYearSale.Size = new System.Drawing.Size(117, 21);
+            this.lblYearSale.TabIndex = 2;
+            this.lblYearSale.Text = "1899445000 đ";
             // 
             // label6
             // 
@@ -149,7 +149,7 @@
             this.guna2Panel2.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderRadius = 40;
             this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.label3);
+            this.guna2Panel2.Controls.Add(this.lblDailySale);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.pictureBox2);
             this.guna2Panel2.FillColor = System.Drawing.Color.SteelBlue;
@@ -159,16 +159,16 @@
             this.guna2Panel2.Size = new System.Drawing.Size(194, 171);
             this.guna2Panel2.TabIndex = 6;
             // 
-            // label3
+            // lblDailySale
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(38, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "1899445000 đ";
+            this.lblDailySale.AutoSize = true;
+            this.lblDailySale.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDailySale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDailySale.Location = new System.Drawing.Point(38, 126);
+            this.lblDailySale.Name = "lblDailySale";
+            this.lblDailySale.Size = new System.Drawing.Size(117, 21);
+            this.lblDailySale.TabIndex = 2;
+            this.lblDailySale.Text = "1899445000 đ";
             // 
             // label4
             // 
@@ -198,7 +198,7 @@
             this.guna2Panel4.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BorderRadius = 40;
             this.guna2Panel4.BorderThickness = 1;
-            this.guna2Panel4.Controls.Add(this.label7);
+            this.guna2Panel4.Controls.Add(this.lblMonthlySale);
             this.guna2Panel4.Controls.Add(this.label8);
             this.guna2Panel4.Controls.Add(this.pictureBox4);
             this.guna2Panel4.FillColor = System.Drawing.Color.RoyalBlue;
@@ -208,16 +208,16 @@
             this.guna2Panel4.Size = new System.Drawing.Size(194, 171);
             this.guna2Panel4.TabIndex = 6;
             // 
-            // label7
+            // lblMonthlySale
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(38, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 21);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "1899445000 đ";
+            this.lblMonthlySale.AutoSize = true;
+            this.lblMonthlySale.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonthlySale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMonthlySale.Location = new System.Drawing.Point(38, 126);
+            this.lblMonthlySale.Name = "lblMonthlySale";
+            this.lblMonthlySale.Size = new System.Drawing.Size(117, 21);
+            this.lblMonthlySale.TabIndex = 2;
+            this.lblMonthlySale.Text = "1899445000 đ";
             // 
             // label8
             // 
@@ -240,24 +240,24 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // guna2ComboBox2
+            // cbbSelectCustomerByYear
             // 
-            this.guna2ComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 5;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FillColor = System.Drawing.Color.MediumTurquoise;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(358, 202);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox2.TabIndex = 7;
+            this.cbbSelectCustomerByYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbSelectCustomerByYear.BackColor = System.Drawing.Color.Transparent;
+            this.cbbSelectCustomerByYear.BorderColor = System.Drawing.Color.Transparent;
+            this.cbbSelectCustomerByYear.BorderRadius = 5;
+            this.cbbSelectCustomerByYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbSelectCustomerByYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSelectCustomerByYear.FillColor = System.Drawing.Color.MediumTurquoise;
+            this.cbbSelectCustomerByYear.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbSelectCustomerByYear.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbSelectCustomerByYear.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbSelectCustomerByYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbSelectCustomerByYear.ItemHeight = 30;
+            this.cbbSelectCustomerByYear.Location = new System.Drawing.Point(358, 202);
+            this.cbbSelectCustomerByYear.Name = "cbbSelectCustomerByYear";
+            this.cbbSelectCustomerByYear.Size = new System.Drawing.Size(140, 36);
+            this.cbbSelectCustomerByYear.TabIndex = 7;
             // 
             // guna2Panel1
             // 
@@ -266,7 +266,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel1.BorderRadius = 40;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.lblTotalCustomer);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.pictureBox1);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -276,16 +276,16 @@
             this.guna2Panel1.Size = new System.Drawing.Size(194, 171);
             this.guna2Panel1.TabIndex = 6;
             // 
-            // label1
+            // lblTotalCustomer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(78, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "144";
+            this.lblTotalCustomer.AutoSize = true;
+            this.lblTotalCustomer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalCustomer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTotalCustomer.Location = new System.Drawing.Point(78, 126);
+            this.lblTotalCustomer.Name = "lblTotalCustomer";
+            this.lblTotalCustomer.Size = new System.Drawing.Size(37, 21);
+            this.lblTotalCustomer.TabIndex = 2;
+            this.lblTotalCustomer.Text = "144";
             // 
             // label2
             // 
@@ -356,7 +356,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.guna2Panel1);
-            this.panel4.Controls.Add(this.guna2ComboBox2);
+            this.panel4.Controls.Add(this.cbbSelectCustomerByYear);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(745, 0);
             this.panel4.Name = "panel4";
@@ -402,21 +402,21 @@
         private LiveCharts.WinForms.CartesianChart chartRevenue;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblMonthlySale;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbSelectCustomerByYear;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalCustomer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartCustomer;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblYearSale;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDailySale;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;

@@ -1,6 +1,7 @@
 ﻿using ManageMiniMart.DAL;
 using ManageMiniMart.DTO;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
@@ -85,6 +86,26 @@ namespace ManageMiniMart.BLL
             var p = db.Customers.Where( c => c.customer_name.Contains(name)).ToList();
             List<CustomerView> customerViews= convertToCustomerView(p);
             return customerViews;
+        }
+        public List<int> getAllYear()
+        {
+            List<int> years = new List<int>();
+            var yearsInCustomer = db.Customers.OrderBy(C => C.created_time).Select(c => new { c.created_time.Year }).ToList().Distinct();
+            foreach(var year in yearsInCustomer)
+            {
+                years.Add(year.Year);
+            }
+            return years;
+        }
+        public int getAmountInMonthAndYear(int month ,int year)
+        {
+            int result = 0;
+            result = db.Customers.Count(s => s.created_time.Month == month && s.created_time.Year == year);
+            return result;
+        }
+        public int getAmountCustomerInSystem()
+        {
+            return db.Customers.Count();
         }
     }
 }

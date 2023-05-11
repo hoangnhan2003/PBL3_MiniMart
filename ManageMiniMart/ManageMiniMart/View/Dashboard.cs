@@ -254,6 +254,10 @@ namespace ManageMiniMart
         private void btnInfo_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColor.blueLight);
+            InfomationForm infomation = new InfomationForm();
+            infomation.setInfoForm(lblUserID.Text);
+            OpenChildForm(infomation);
+
         }
     }
 }

@@ -11,7 +11,7 @@ namespace ManageMiniMart.BLL
 {
     public class ShiftDetailService
     {
-        public Int32 shiftIdAdded;
+        public int shiftIdAdded;
         private Manage_MinimartEntities db;
         public ShiftDetailService()
         {
@@ -51,10 +51,18 @@ namespace ManageMiniMart.BLL
             db.SaveChanges();
             shiftIdAdded = shift.shift_id;
         }
-        public void remove(Shift_detail shift)
+        public void remove(int  shift)
         {
-            db.Shift_detail.Remove(shift);
+            List<Shift_work> shift_Works = db.Shift_work.Where(s => s.shift_id== shift).ToList();
+            db.Shift_work.RemoveRange(shift_Works);
+            Shift_detail shift_detail = db.Shift_detail.Find(shift);
+            db.Shift_detail.Remove(shift_detail);
             db.SaveChanges();
+        }
+        //true when not duplicate time
+        public bool checkTime(DateTime startTime)
+        {
+            return db.Shift_detail.Where(s => s.start_time == startTime).FirstOrDefault() == null ? true : false;
         }
 
     }
