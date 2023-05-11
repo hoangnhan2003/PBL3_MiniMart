@@ -42,7 +42,8 @@ namespace ManageMiniMart.View
             });
             chartRevenue.LegendLocation = LiveCharts.LegendLocation.Right;
             loadRevenue();
-            loadChartCustomer(2023);
+            //customerService.getAllYear()[0]
+            loadChartCustomer(2019);
         }
         //private void loadRevenue()
         //{
@@ -115,22 +116,23 @@ namespace ManageMiniMart.View
             lblTotalCustomer.Text = customerService.getAmountCustomerInSystem().ToString();
             cbbSelectCustomerByYear.DataSource = customerService.getAllYear();
         }
-        //private void loadChartCustomer()
-        //{
-        //    Random r = new Random();
-        //    for (int i = 1; i< 13; i++)
-        //    {
-        //        int value = r.Next(10, 200);
-        //        chartCustomer.Series["AmountCustomer"].Points.Add(value);
-        //        chartCustomer.Series["AmountCustomer"].Points[i-1].Color = Color.Plum;
-        //        chartCustomer.Series["AmountCustomer"].Points[i-1].AxisLabel = i.ToString();
-        //        chartCustomer.Series["AmountCustomer"].Points[i - 1].LegendText= value.ToString();
-        //        chartCustomer.Series["AmountCustomer"].Points[i - 1].Label = value.ToString();
-        //    }
-        //}
+        private void loadChartCustomer()
+        {
+            Random r = new Random();
+            for (int i = 1; i < 13; i++)
+            {
+                int value = r.Next(10, 200);
+                chartCustomer.Series["AmountCustomer"].Points.Add(value);
+                chartCustomer.Series["AmountCustomer"].Points[i - 1].Color = Color.Plum;
+                chartCustomer.Series["AmountCustomer"].Points[i - 1].AxisLabel = i.ToString();
+                chartCustomer.Series["AmountCustomer"].Points[i - 1].LegendText = value.ToString();
+                chartCustomer.Series["AmountCustomer"].Points[i - 1].Label = value.ToString();
+            }
+        }
         private void loadChartCustomer(int year)
         {
-            
+            chartCustomer.Series["AmountCustomer"].Points.Clear();
+
             for (int i = 1; i < 13; i++)
             {
                 int value = customerService.getAmountInMonthAndYear(i, year);
@@ -145,6 +147,11 @@ namespace ManageMiniMart.View
         private void chartRevenue_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
 
+        }
+
+        private void cbbSelectCustomerByYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           loadChartCustomer(Convert.ToInt32(cbbSelectCustomerByYear.Text));
         }
     }
 }

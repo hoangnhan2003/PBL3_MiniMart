@@ -258,6 +258,7 @@
             this.cbbSelectCustomerByYear.Name = "cbbSelectCustomerByYear";
             this.cbbSelectCustomerByYear.Size = new System.Drawing.Size(140, 36);
             this.cbbSelectCustomerByYear.TabIndex = 7;
+            this.cbbSelectCustomerByYear.SelectedIndexChanged += new System.EventHandler(this.cbbSelectCustomerByYear_SelectedIndexChanged);
             // 
             // guna2Panel1
             // 
