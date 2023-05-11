@@ -69,3 +69,4 @@ H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\Man
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.FormDetailBill.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.InfomationForm.resources
 H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.ChangePasswordForm.resources
+H:\OneDrive - The University of Technology\PBL3\PBL3_MiniMart\ManageMiniMart\ManageMiniMart\obj\Debug\ManageMiniMart.View.DetailBillForm.resources

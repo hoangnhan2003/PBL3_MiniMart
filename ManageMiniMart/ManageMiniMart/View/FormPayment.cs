@@ -220,11 +220,16 @@ namespace ManageMiniMart.View
                     bill_ProductService.SaveBill_Product(bill_Product);
                     
                 }
+                // Cap nhat diem cua khach hang
                 if(customer != null)
                 {
                     int pointOld = (int)customer.point;
                     int pointAdd = (int)(totalMoney / 20000);
                     customer.point += pointAdd;
+                    if(checkBoxPoint.Checked == true)
+                    {
+                        // Thực hiện việc dùng điểm ở đây
+                    }
                     customerService.save(customer);
                 }
                 

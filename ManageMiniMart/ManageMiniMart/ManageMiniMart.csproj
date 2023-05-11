@@ -196,6 +196,12 @@
     <Compile Include="View\ChangePasswordForm.Designer.cs">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DetailBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DetailBillForm.Designer.cs">
+      <DependentUpon>DetailBillForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EmployeeView\DashboardEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DetailBillForm.resx">
+      <DependentUpon>DetailBillForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EmployeeView\DashboardEmployee.resx">
       <DependentUpon>DashboardEmployee.cs</DependentUpon>

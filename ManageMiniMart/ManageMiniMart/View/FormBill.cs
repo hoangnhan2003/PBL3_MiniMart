@@ -46,10 +46,13 @@ namespace ManageMiniMart
         {
             if (dgvBill.Columns[e.ColumnIndex].Name == "detailBill")
             {
-                FormDetailBill formDetailBill = new FormDetailBill();
+                //FormDetailBill formDetailBill = new FormDetailBill();
+                DetailBillForm detailBillForm = new DetailBillForm();
                 int billId = Convert.ToInt16(dgvBill.SelectedRows[0].Cells[0].Value.ToString());
-                formDetailBill.setDatagridView(billId);
-                formDetailBill.Show();
+                //formDetailBill.setDatagridView(billId);
+                //formDetailBill.Show();
+                detailBillForm.setDatagridView(billId);
+                detailBillForm.Show();
             }
         }
     }
